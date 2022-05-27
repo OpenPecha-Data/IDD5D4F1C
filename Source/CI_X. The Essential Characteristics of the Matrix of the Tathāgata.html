@@ -1,0 +1,518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1125' accesskey='1'>Asaṅga/Maitreya: Ratnagotravibhāga</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Asaṅga/Maitreya: Ratnagotravibhāga<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5671]" value="5671" id="lancheckbox" checked >Sanskrit: San: Johnston (1950)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5672]" value="5672" id="lancheckbox" checked >Chinese: Chi: T. 1611</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5673]" value="5673" id="lancheckbox" checked >Tibetan: Tib: Tg phi</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5674]" value="5674" id="lancheckbox" checked >English: Eng: Takasaki (1966)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1125">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1125">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1125'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1125">Search in Asaṅga/Maitreya: Ratnagotravibhāga</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1125'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1125'>Asaṅga/Maitreya: Ratnagotravibhāga</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="134678.Title|134679.Preface|134680.ChapterI:TheMatrixoftheTathāgata|134692.ChapterII:TheMatrixoftheTathāgata|134695.ChapterIII:ThePropertiesoftheBuddha|134698.ChapterIV:TheActsofTheBuddha|134701.ChapterV:TheMeritsofFaith|134703.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134678.Title" border=0 hspace=2><a id="href_134678.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943437&level=1&cid=844383" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134679.Preface" border=0 hspace=2><a id="href_134679.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943438&level=1&cid=844384" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134680.ChapterI:TheMatrixoftheTathāgata','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134680.ChapterI:TheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134680.ChapterI:TheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943439&level=1&cid=844385" class="ajax_tree0">Chapter I: The Matrix of the Tathāgata
+</td></tr></table>
+<div style="display:none;"  id="div_134680.ChapterI:TheMatrixoftheTathāgata">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134681.I.Introduction" border=0 hspace=2><a id="href_134681.I.Introduction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943440&level=2&cid=844386" class="ajax_tree1">I. Introduction
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134682.II.TheJeweloftheBuddha" border=0 hspace=2><a id="href_134682.II.TheJeweloftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943480&level=2&cid=844403" class="ajax_tree1">II. The Jewel of the Buddha
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134683.III.TheJeweloftheDoctrine" border=0 hspace=2><a id="href_134683.III.TheJeweloftheDoctrine" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943510&level=2&cid=844411" class="ajax_tree1">III. The Jewel of the Doctrine
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134684.IV.TheJeweloftheCommunity" border=0 hspace=2><a id="href_134684.IV.TheJeweloftheCommunity" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943536&level=2&cid=844424" class="ajax_tree1">IV. The Jewel of the Community
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134685.V.TheThreeJewelsasRefuges" border=0 hspace=2><a id="href_134685.V.TheThreeJewelsasRefuges" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943558&level=2&cid=844435" class="ajax_tree1">V. The Three Jewels as Refuges
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134686.VI.TheGermOfThreeJewelsInFourAspects" border=0 hspace=2><a id="href_134686.VI.TheGermOfThreeJewelsInFourAspects" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943581&level=2&cid=844445" class="ajax_tree1">VI. The Germ Of Three Jewels In Four Aspects
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134687.VII.TheSermon:AllLivingBeingsarepossessedofTheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134687.VII.TheSermon:AllLivingBeingsarepossessedofTheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943612&level=2&cid=844453" class="ajax_tree1">VII. The Sermon: All Living Beings are possessed of The Matrix of the Tathāgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134688.VIII.AnalysisoftheGermfrom10PointsofView" border=0 hspace=2><a id="href_134688.VIII.AnalysisoftheGermfrom10PointsofView" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943617&level=2&cid=844457" class="ajax_tree1">VIII. Analysis of the Germ from 10 Points of View
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134689.IX.The9IllustrationsontheGermCoveredwithDefilements" border=0 hspace=2><a id="href_134689.IX.The9IllustrationsontheGermCoveredwithDefilements" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943869&level=2&cid=844524" class="ajax_tree1">IX. The 9 Illustrations on the Germ Covered with Defilements
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134690.X.TheEssentialCharacteristicsoftheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134690.X.TheEssentialCharacteristicsoftheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943963&level=2&cid=844551" class="ajax_tree1">X. The Essential Characteristics of the Matrix of the Tathāgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134691.XI.ThePurposeofInstruction" border=0 hspace=2><a id="href_134691.XI.ThePurposeofInstruction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943995&level=2&cid=844559" class="ajax_tree1">XI. The Purpose of Instruction
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134692.ChapterII:TheMatrixoftheTathāgata','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134692.ChapterII:TheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134692.ChapterII:TheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944010&level=1&cid=844563" class="ajax_tree0">Chapter II: The Matrix of the Tathāgata
+</td></tr></table>
+<div style="display:none;"  id="div_134692.ChapterII:TheMatrixoftheTathāgata">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134693.XII.GeneralCharacteristicsoftheRealityFreefromPollutions" border=0 hspace=2><a id="href_134693.XII.GeneralCharacteristicsoftheRealityFreefromPollutions" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944011&level=2&cid=844564" class="ajax_tree1">XII. General Characteristics of the Reality Free from Pollutions
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134694.XIII.8PointsontheUndefiledReality" border=0 hspace=2><a id="href_134694.XIII.8PointsontheUndefiledReality" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944020&level=2&cid=844569" class="ajax_tree1">XIII. 8 Points on the Undefiled Reality
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134695.ChapterIII:ThePropertiesoftheBuddha','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134695.ChapterIII:ThePropertiesoftheBuddha" border=0 hspace=2><a id="href_134695.ChapterIII:ThePropertiesoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944101&level=1&cid=844585" class="ajax_tree0">Chapter III: The Properties of the Buddha
+</td></tr></table>
+<div style="display:none;"  id="div_134695.ChapterIII:ThePropertiesoftheBuddha">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134696.XIV.GeneralCharacteristicsOfTheBuddha’sProperties" border=0 hspace=2><a id="href_134696.XIV.GeneralCharacteristicsOfTheBuddha’sProperties" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944102&level=2&cid=844586" class="ajax_tree1">XIV. General Characteristics Of The Buddha’s Properties
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134697.XV.64PropertiesoftheBuddha" border=0 hspace=2><a id="href_134697.XV.64PropertiesoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944107&level=2&cid=844589" class="ajax_tree1">XV. 64 Properties of the Buddha
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134698.ChapterIV:TheActsofTheBuddha','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134698.ChapterIV:TheActsofTheBuddha" border=0 hspace=2><a id="href_134698.ChapterIV:TheActsofTheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944151&level=1&cid=844599" class="ajax_tree0">Chapter IV: The Acts of The Buddha
+</td></tr></table>
+<div style="display:none;"  id="div_134698.ChapterIV:TheActsofTheBuddha">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134699.XVI.GeneralCharacteristicsoftheActsoftheBuddha" border=0 hspace=2><a id="href_134699.XVI.GeneralCharacteristicsoftheActsoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944152&level=2&cid=844600" class="ajax_tree1">XVI. General Characteristics of the Acts of the Buddha
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134700.XVII.9IllustrationsoftheBuddha’sActs" border=0 hspace=2><a id="href_134700.XVII.9IllustrationsoftheBuddha’sActs" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944166&level=2&cid=844603" class="ajax_tree1">XVII. 9 Illustrations of the Buddha’s Acts
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134701.ChapterV:TheMeritsofFaith','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134701.ChapterV:TheMeritsofFaith" border=0 hspace=2><a id="href_134701.ChapterV:TheMeritsofFaith" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944267&level=1&cid=844620" class="ajax_tree0">Chapter V: The Merits of Faith
+</td></tr></table>
+<div style="display:none;"  id="div_134701.ChapterV:TheMeritsofFaith">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134702.XVIII.TheMeritsofHavingFaithintheDoctrineoftheEssenceofBuddhahood" border=0 hspace=2><a id="href_134702.XVIII.TheMeritsofHavingFaithintheDoctrineoftheEssenceofBuddhahood" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944268&level=2&cid=844621" class="ajax_tree1">XVIII. The Merits of Having Faith in the Doctrine of the Essence of Buddhahood
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134703.Colophon" border=0 hspace=2><a id="href_134703.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944299&level=1&cid=844624" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('134690.X.TheEssentialCharacteristicsoftheMatrixoftheTathāgata|134680.ChapterI:TheMatrixoftheTathāgata|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1125&amp;mid=1943963&amp;level=2">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125&amp;cid=844551&amp;mid=1943963&amp;level=2">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125&amp;cid=844551&amp;mid=1943963&amp;level=2">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='7861922'></div><div class='clear'></div><span id='7861922bi' class='chaptertitle'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='7862785'></div><div class='clear'></div><span id='7862785bi' class='chaptertitle'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7863648'></div><div class='clear'></div><span id='7863648bi' class='chaptertitle'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='7864511'></div><div class='clear'></div><span id='7864511bi' class='chaptertitle'>
+							X. THE ESSENTIAL CHARACTERISTICS OF THE MATRIX OF THE TATHĀGATA&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861923bi' class='paragraph'>
+							sa khalv eṣa tathāgatagarbho dharmakāyāvipralambhas tathatāsaṃbhinnalakṣaṇo niyatagotrasvabhāvaḥ sarvadā ca sarvatra ca niravaśeṣayogena sattvadhātāv iti draṣṭavyaṃ dharmatāṃ pramāṇīkṛtya |&nbsp;</span><span id='7861924bi' class='paragraph'>
+						 yathoktam | eṣā kulaputra dharmāṇāṃ dharmatā | utpādād vā tathāgatānām anutpādād vā sadaivaite sattvās tathāgatagarbhā iti |&nbsp;</span><span id='7861925bi' class='paragraph'>
+						 yaiva cāsau dharmatā saivātra yuktir yoga upāyaḥ paryāyaḥ | evam eva tat syāt | anyathā naiva tat syād iti | sarvatra dharmataiva pratiśaraṇam | dharmataiva yuktiś cittani dhyāpanāya cittasaṃjñāpanāya | sā na cintayitavyā na vikalpayitavyādhimoktavyeti |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862786bi' class='paragraph'>
+							此明何義。明如來藏究竟如來法身不差別。真如體相畢竟定佛性體。於一切時一切眾生身中皆無餘盡應知。此云何知依法相知。&nbsp;</span><span id='7862787bi' class='paragraph'>
+						 是故經說。善男子。此法性法 體性自性常住。如來出世若不出世。自性清淨本來常住。一切眾生有如來藏。&nbsp;</span><span id='7862788bi' class='paragraph'>
+						 此明何義。依法性依法體。依法相應依法方便。此法為如是為不如是。不可思議。一切處依法依法 量依法信。得心淨得心定。彼不可分別。為實為不實。唯依如來信。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863649bi' class='paragraph'>
+							chos kyi sku ltar rgya che ba de bźin gśegs pa daṅ dbyer med pa’i mtshan ñid ṅes pa’i rigs kyi raṅ bźin de bźin gśegs pa’i sñiṅ po de yaṅ thams cad kyi tshe thams cad la khyad par med pa’i tshul du yod do źes bya ba’i bar ni | chos ñid tshad mar byas nas blta bar bya ste |&nbsp;</span><span id='7863650bi' class='paragraph'>
+						 ji skad du | rigs kyi bu ’di ni chos rnams kyi chos ñid de | de bźin gśegs pa rnams byuṅ yaṅ ruṅ ma byuṅ yaṅ ruṅ ste | sems can ’di dag ni rtag tu de bźin gśegs pa’i sñiṅ po can no źes gsugs pa yin no ||&nbsp;</span><span id='7863651bi' class='paragraph'>
+						 chos ñid gaṅ yin pa de ñid ni ’dir gaṅ gis de lta bu kho nar ’gyur gyi gźan du mi ’gyur ro źes bya ba’i rigs pa daṅ sbyor ba daṅ thabs yin te | thams cad du sems ṅas par rtogs pa daṅ | sems yaṅ dag par śes pa la ni | chos ñid kyi rtogs pa daṅ | chos ñid kyi rigs pa yin no de ni bsam par mi bya | rnam par brtag par mi bya’i | lhag par mos par bya ba ’ba’ źig tu zad do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864512bi' class='paragraph'>
+							&sect;1. The Saying: All Living Beings are Pośeśed of the Matrix of the Tathāgata is the Highest Logical Truth.) Now, this Matrix of the Tathāgata, being united with the Absolute Body, having the characteristics inseparable from Reality, and being of the nature of the germ properly fixed [towards the attainment of the Buddhahood], exists everywhere, at whatever time and without exception among the living beings, this is indeed to be perceived in the light of the Absolute Essence as the [highest] logical ground.&nbsp;</span><span id='7864513bi' class='paragraph'>
+						 It is said: “O noble youth, such is the Essential nature of the elements. Whether the Tathāgatas appear in this world, or whether they do not, these living beings are always possessed of the Matrix of the Tathāgata”.&nbsp;</span><span id='7864514bi' class='paragraph'>
+						 That which is meant by this ‘Essential nature’ is here synonymous for the ‘argument’, the mode of proof and the means [of cognition], in the sense: such is the real state of things and not otherwise. In any case only the Absolute Essence is the resort for the contemplation of the mind, only the Absolute Essence is the argument for the proper understanding of the mind. This Essence itself is not accessible to imagination nor to discrimination. It is accessible only to faith.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861926bi' class='verse'>
+							śraddhayaivānugantavyaṃ paramārthe svayaṃbhuvām |<br />na hy acakṣuḥ prabhādīptam īkṣate sūryamaṇḍalam || 153 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862789bi' class='verse'>
+							是故偈言 唯依如來信 信於第一義 如無眼目者 不能見日輪&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863652bi' class='verse'>
+							raṅ byuṅ rnams kyi don dam de || dad pa ñid kyis rtogs bya yin || ñi ma’i dkyil ’khor ’od ’bar ba || mig med pas ni mthoṅ ba med ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864515bi' class='verse'>
+							(&sect;2. The Kinds of Individuals to Whom the Faith in this Essence is Necessary.) The Highest Truth of the Buddhas Can be understood only by faith, Indeed, the eyeless one cannot see The blazing disk of the sun. || 53 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861927bi' class='paragraph'>
+							samāsata ime catvāraḥ pudgalās tathāgatagarbhadarśanaṃ pratyacakṣuṣmanto vya vasthitāḥ | katame catvāraḥ | yad uta pṛthagjanaḥ śrāvakaḥ pratyekabuddho navayānasaṃ prasthitaś ca bodhisattvaḥ |&nbsp;</span><span id='7861928bi' class='paragraph'>
+						 yathoktam | agocaro ’yaṃ bhagavaṃs tathāgatagarbhaḥ satkāyadṛṣṭipatitānāṃ viparyāsābhiratānāṃ śūnyatāvikṣiptacittānām iti |&nbsp;</span><span id='7861929bi' class='paragraph'>
+						 tatra satkāyadṛṣṭipatitā ucyante bālapṛthagjanāḥ | tathā hi te ’tyantasāsravaskandhādīn dharmān ātmata ātmīyataś copagamyāhaṃkāramamakārābhiniviṣṭāḥ satkāyanirodham anāsravadhātum adhimoktum api nālam |&nbsp;</span><span id='7861930bi' class='paragraph'>
+						 kutaḥ punaḥ sarvajñaviṣayaṃ tathāgatagarbham avabhotsyanta iti | nedaṃ sthānaṃ vidyate | tatra viparyāsābhiratā ucyante śrāvakapratyekabuddhāḥ | tat kasmāt |&nbsp;</span><span id='7861931bi' class='paragraph'>
+						 te ’pi hi nitye tathāgatagarbhe saty uttaribhāvayitavye tannityasaṃjñābhāvanāviparyayeṇānityasaṃjñā bhāvanābhiratāḥ | sukhe tathāgatagarbhe saty uttaribhāvayitavye tatsukhasaṃjñābhāvanā viparyayeṇa duḥkhasaṃjñābhāvanābhiratāḥ |&nbsp;</span><span id='7861932bi' class='paragraph'>
+						 ātmani tathāgatagarbhe saty uttaribhāva yitavye tadātmasaṃjñābhāvanāviparyayeṇānātmasaṃjñābhāvanābhiratāḥ | śubhe tathāgatagarbhe saty uttaribhāvayitavye tacchubhasaṃjñābhāvanāviparyayeṇāśubhasaṃjñā bhāvanābhiratāḥ |&nbsp;</span><span id='7861933bi' class='paragraph'>
+						 evam anena paryāyeṇa sarvaśrāvakapratyekabuddhānām api dharmakāya prāptividhuramārgābhiratatvād agocaraḥ sa param anityasukhātmaśubhalakṣaṇo dhātur ity uktam |&nbsp;</span><span id='7861934bi' class='paragraph'>
+						 yathā ca sa viparyāsābhiratānām anityaduḥkhānātmāśubhasaṃjñānāṃ agocaras tathā vistareṇa mahāparinirvāṇasūtre bhagavatā vāpītoyamaṇidṛṣṭāntena prasā dhitaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862790bi' class='paragraph'>
+							此偈明何義。略說一切眾生界中有四種眾生。不識如來藏如生盲人。何等為四。一者凡夫。二者聲聞。三者辟支佛。四者初發菩提心 菩薩。&nbsp;</span><span id='7862791bi' class='paragraph'>
+						 如聖者勝鬘經中說言。世尊。如來藏者。於身見眾生非其境界。世尊。如來藏者。於取四顛倒眾生非其境界。世尊。如來藏者。於散心失空眾生非其境界故。&nbsp;</span><span id='7862792bi' class='paragraph'>
+						 此明何義。身見眾生者。謂諸凡夫。以彼凡夫實無色等五陰諸法而取以為有我我所。虛妄執著我我所慢。於離身見等滅諦無漏性甘露之法。信亦不能。&nbsp;</span><span id='7862793bi' class='paragraph'>
+						 何況出世間一切智境界如來藏能 證能解。無有是處。又取四顛倒諸眾生者。所謂聲聞辟支佛人。&nbsp;</span><span id='7862794bi' class='paragraph'>
+						 以彼聲聞辟支佛等應修 行如來藏常。而不修行如來藏以為常。以顛倒取一切法無常。修行如來藏無常。樂無常修行。以不知不覺故。應修行如來藏樂。而不修行如來藏以為樂。以顛倒取一切法皆苦。修行如來藏苦。樂苦修行。以不知不覺故。&nbsp;</span><span id='7862795bi' class='paragraph'>
+						 應修行如來藏我。而不修行如來藏以為我。以顛倒取一切法無我。修行如來藏 無我。樂無我修行。以不知不覺故。應修行如來藏淨。而不修行如來藏以為淨。以顛倒取 一切法不淨。修行如來藏不淨。樂不淨修行。以不知不覺故。&nbsp;</span><span id='7862796bi' class='paragraph'>
+						 如是聲聞辟支佛等。一切不能如實隨順法身修行。以是義故。第一彼岸常樂我淨法。非彼聲聞辟支佛等所知境界。&nbsp;</span><span id='7862797bi' class='paragraph'>
+						 如是樂顛倒無常苦無我不淨相等。彼如來藏非其境界。如是之義大般涅槃修多羅中。池水譬喻廣明此義應知。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863653bi' class='paragraph'>
+							mdor bsdu na | gaṅ zag bźi po ’di ni de bźin gśegs pa’i sñiṅ po mthoṅ ba la mig daṅ mi ldan par rnam par gźag pa yin te | bźi gaṅ źe na | ’di lta ste | so so ‘i skye bo daṅ | ñan thos daṅ | raṅ saṅs rgyas daṅ | theg pa la gsar du źugs pa’i byaṅ chub sems dpa’ ste |&nbsp;</span><span id='7863654bi' class='paragraph'>
+						 ji skad du | bcom ldan ’das de bźin gśegs pa’i sñiṅ po ’di ni ’jig tshogs la lta bar lhuṅ ba rnams daṅ | phyin ci log la mṅon par ’dod pa rnams daṅ | stoṅ ba ñid las sems rnam par g-yeṅs pa rnams kyi spyod yul ma lags so źes gsuṅs pa bźin no ||&nbsp;</span><span id='7863655bi' class='paragraph'>
+						 de la ’jig tshogs la lta bar lhuṅ ba ni byis pa so so’i skye bo la brjod de | ’di ltar de dag ni gtan du phuṅ po la sogs pa’i chos zag pa daṅ bcas pa rnams la bdag daṅ bdag gi ba ñid du khas blaṅs nas ṅar ’dzin pa daṅ | ṅa yir ’dzin pa la mṅon par źen pas na ’jig tshogs ’gags pa zag pa med pa’i dbyiṅs la lhag par mos par mi nus bdag ste |&nbsp;</span><span id='7863656bi' class='paragraph'>
+						 de dag gis thams cad mkhyen pa’i yul de bźin gśegs pa’i sñiṅ po rtogs par ltag la ’gyur te ’di ni gnas med do || de la phyin ci log la mṅon par dga’ ba ni | ñan thos daṅ raṅ saṅs rgyas dag la brjod do || de ci’i phyir źe na |&nbsp;</span><span id='7863657bi' class='paragraph'>
+						 ’di lta ste | de dag kyaṅ de bźin gśegs pa’i sñiṅ po rtag pa ñid du bsgom par bya ba las | slar de rtag pa’i ’du śes su sgon pa las bzlog nas mi rtag par ’du śes su sgom pa la mṅon par dga’ ba ñid daṅ | de bźin gśegs pa’i sñiṅ po bde bar bsgom par bya ba las | slar de bde ba’i ’du śes su sgom pa las bzlog nas | sdug bsṅal ba’i ’du śes yoṅs su sgom pa la mṅon par dga’ ba ñid || daṅ |&nbsp;</span><span id='7863658bi' class='paragraph'>
+						 de bźin gśegs pa’i sñiṅ po bdag tu bsgom par bya ba las | slar de la bdag gi ’du śes su sgom pa las bzlog nas | bdag med pa’i ’du śes su sgom pa la dga’ ba ñid daṅ | de bźin gśegs pa’i sñiṅ po gtsaṅ bar sgom par bya ba las | slar de la gtsaṅ ba’i ’du śes su sgom pa las bzlog nas | mi gtsaṅ ba’i ’du śes sgom pa la mṅon par dga’ ba ñid kyi phyir ro ||&nbsp;</span><span id='7863659bi' class='paragraph'>
+						 de ltar rnam graṅs ’dis ni chos kyi sku thob pa daṅ ’gal ba’i lam la mṅon par dga’ ba’i phyir mchog tu rtag pa daṅ | bde ba daṅ | bdag daṅ | sdug pa’i mtshan ñid kyi khams de ni ñan thos daṅ | raṅ saṅs rgyas thams cad kyi yaṅ spyod yul ma yin no źes bśad pa yin no ||&nbsp;</span><span id='7863660bi' class='paragraph'>
+						 de ltar phyin ci log la mṅon par dga’ ba | mi rtag pa daṅ | sdug bsṅal ba daṅ | bdag med pa daṅ | mi sdug pa’i ’du śes can rnams kyi spyod yul ma yin pa de ltar rgyas par yoṅs su mya ṅan las ’das pa chen po’i mdor | bcom ldan ’das kyis rdziṅ gi chu’i nor bu’i dpe rab tu bsgrubs te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864516bi' class='paragraph'>
+							In brief, there are four kinds of individuals who are defined as being blind with regard to the perception of the Matrix of the Tathāgata. Who are these four? They are namely: 1) the ordinary beings; 2) the Śrāvakas; 3) the Pratyekabuddhas; and 4) the Bodhisattvas who have recently entered the Vehicle.&nbsp;</span><span id='7864517bi' class='paragraph'>
+						 It is said: “O Lord, the Matrix of the Tathāgata is not the accessible sphere for those who have fallen into the erroneous conception maintaining the existence of individuality, for those who are attached to delusion, and for those whose mind has deviated from the conception of Non-substantiality”.&nbsp;</span><span id='7864518bi' class='paragraph'>
+						 Here, ‘those who have fallen into the erroneous conception maintaining the existence of individuality’ are the ordinary beings. Indeed, having fully admitted those elements claśified into [5] groups and others, which are possessed of Evil Influences, as being the real Ego and its belongings, they are clinging to the conception of ‘Ego’ and, ‘Mine’, and, due to this conception, they cannot believe even in the Immaculate Essence which represents the annihilation of the [conception of the] existence of real individuality.&nbsp;</span><span id='7864519bi' class='paragraph'>
+						 Being so, how is it pośible for them to cognize the Matrix of the Tathāgata which is the object accessible only to the Omniscient? There is [absolutely] no room for it. Now ‘those who are attached to delusion’ represent 2) the Śrāvakas and 3) the Pratyekabuddhas. Why?&nbsp;</span><span id='7864520bi' class='paragraph'>
+						 Because, although the Matrix of the Tathāgata is to be considered as ‘eternal’ in its transcendental sense, they indulge in the contemplation of the ‘evanescence’ [of the phenomena 30)] instead of meditating upon the ‘eternity’ of the former. Likewise, although the Matrix of the Tathāgata is to be considered as ‘blissful’ in its transcendental sense, still they indulge in the contemplation of the ‘suffering’ [of the phenomena] instead of meditating upon the ‘bliś’ of the former.&nbsp;</span><span id='7864521bi' class='paragraph'>
+						 Although the Matrix of the Tathāgata is to be regarded as ‘the [highest] Unity’ they nevertheless cling to the practice of meditation on the idea of ‘non-Ego’ [of the separate elements] instead of concentrating their mind on the notion of the Unity of the former. And, though the Matrix of the Tathāgata is to be considered as ‘pure’ in the transcendental sense, they devote themselves to the practice of meditation on the notion of the ‘impurity’ [of the Phenomenal World] without doing meditation on ‘Purity’ of the former.&nbsp;</span><span id='7864522bi' class='paragraph'>
+						 Thus, in such a way, all the Śrāvakas and Pratyekabuddhas are attached to the Path which is quite opposite to the realization of the Absolute Body, and hence the Essence [of the Tathāgata] which is characterized as the Supreme Eternity, the Supreme Bliss, the Supreme Unity, and the Supreme Purity, is said not to be accessible to them, too.&nbsp;</span><span id='7864523bi' class='paragraph'>
+						 About this inaccessibility of the Essence to those who are attached to delusion, i.e. who have the notion of Evenescence, Suffering, Impersonality and Impurity [as the almighty maximum], the Lord has made it clear in detail in the Mahāparinirvāṇa-sūtra with the example of a jewel in the water of a pond.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861935bi' class='paragraph'>
+							tad yathāpi nāma bhikṣavo grīṣmakāle vartamāne salilabandhanaṃ buddhvā svaiḥ svair maṇḍanakopabhogair janāḥ salile krīḍeyuḥ | atha tatraiko jātyaṃ vaiḍūryamaṇim antarudake sthāpayet | tatas tasya vaiḍūryasyārthe sarve te maṇḍanakāni tyaktvā nimajjeyuḥ |&nbsp;</span><span id='7861936bi' class='paragraph'>
+						 atha yat tatrāsti śarkaraṃ kaṭhalyaṃ vā tat te maṇir iti manyamānā gṛhītvā mayā labdho maṇir ity utsṛjyotsṛjya vāpītīre sthitvā nāyaṃ maṇir iti saṃjñāṃ pravarteyuḥ | tac ca vāpyudakaṃ maṇiprabhāvena tatprabhavena bhrājeta | evaṃ teṣāṃ tadudakaṃ bhrājamānaṃ dṛṣṭvāho maṇir iti guṇasaṃjñāṃ pravarteta |&nbsp;</span><span id='7861937bi' class='paragraph'>
+						 atha tatraika upāyakuśalo medhāvī maṇiṃ tattvataḥ pratilabhate | evam eva bhikṣavo yuṣmābhiḥ sarvam anityaṃ sarvaṃ duḥkhaṃ sarvam anātmakaṃ sarvam aśubham iti sarvagrahaṇena bhāvitabhāvitaṃ bahulīkṛtabahulīkṛtaṃ dharma tattvam ajānadbhis tat sarvaṃ ghaṭitaṃ nirarthakam |&nbsp;</span><span id='7861938bi' class='paragraph'>
+						 tasmād bhikṣavo vāpīśarkarakaṭhalyavyavasthitā iva mā bhūta | upāyakuśalā yūyaṃ bhavata | yad yad bhikṣavo yuṣmābhiḥ sarvam anityaṃ sarvaṃ duḥkhaṃ sarvam anātmakaṃ sarvam aśubham iti sarvagrahaṇena bhāvitabhāvitaṃ bahulīkṛtabahulī kṛtaṃ tatra tatraiva nityasukhaśubhātmakāni santīti vistareṇa paramadharmatattvavyavasthā nam ārabhya viparyāsabhūtanirdeśo yathāsūtram anugantavyaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862798bi' class='paragraph'>
+							彼經中言。迦葉。譬如春時有諸人等在大池浴乘船遊戲。失琉璃寶沒深水中。是時諸人悉共入水心覓是寶。&nbsp;</span><span id='7862799bi' class='paragraph'>
+						 競捉瓦石草木沙礫。各各自謂得琉璃珠。歡喜持出乃知非真。是時寶珠猶在水中。以珠力故水皆澄清。於是大眾乃見寶珠故在水下。猶如仰觀虛空月形。&nbsp;</span><span id='7862800bi' class='paragraph'>
+						 是時眾中有一智人。以方便力安徐入水即便得珠。汝等比丘。不應如是修集無常苦無我想不淨想等以為真實。如彼諸人各以瓦石草木沙礫而 為寶珠。汝等應當善學方便在在處處常修我想常樂淨想。&nbsp;</span><span id='7862801bi' class='paragraph'>
+						 復應當知。先所修集四法相貌悉是顛倒。欲得真實修諸想者。如彼智人巧出寶珠。所謂我想常樂淨想故。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863661bi' class='paragraph'>
+							’di lta ste | dge sloṅ dag dper na so ga’i dus la bab pa na | skye bo dag khrus ras bciṅs te | raṅ raṅ gi rgyan daṅ ñe bar spyod pa dag gis chu la rtse’o || de nas der cig gis rigs daṅ ldan pa’i nor bu bai ḍūrya chu’i naṅ du gźag pa daṅ | de nas bai ḍūrya de’i don du de dag thams cad rgyan gźag nas źugs par gyur to ||&nbsp;</span><span id='7863662bi' class='paragraph'>
+						 de nas de na yod pa’i gseg ma’am gyo mo de dag la nor bu’o sñam nas bzuṅ ste | bdag gis nor bu rñed do sñam ste phyuṅ ṅo || phyuṅ nas rdziṅ bu’i ’gram du bltas pa na ’di ni nor bu ma yin no sñam pa’i ’du śes rab tu ’jug go || rdziṅ gi chu de yaṅ nor bu’i mthus nor bu’i ’od daṅ ’dra bar snaṅ ṅo || de dag de ltar snaṅ ba’i chu de yaṅ e ma’o nor bu’o sñam du yon tan gyi ’du śes rab tu źugs so ||&nbsp;</span><span id='7863663bi' class='paragraph'>
+						 de nas de la thabs mkhas śiṅ yid gźuṅs pa cig gis nor bu de de kho na bźin du rñyed par gyur to || dge sloṅ dag de bźin du nor bu ltar chos kyi don de kho na mi śes pa khyed kyis thams cad mi rtag pa daṅ | thams cad sdug bsṅal ba daṅ | thams cad bdag med pa daṅ | thams cad mi sdug pa’o źes ’dzin pa thams cad kyis sgom źiṅ | sgom pa lan maṅ du byas śiṅ maṅ du byas pas ñe bar gźag pa de thams cad ni don med do ||&nbsp;</span><span id='7863664bi' class='paragraph'>
+						 dge sloṅ bdag de’i phyir rdziṅ de dag gi gseg ma daṅ | gyo mo’i rnam par gnas pa ltar mi ’gyur bar khyed cag thabs la mkhas par gyis śig | dge sloṅ dag khyed kyis gaṅ daṅ gaṅ thams cad mi rtag pa ñid daṅ | thams cad sdug bsṅal ba daṅ | thams cad bdag med pa daṅ | thams cad mi gtsaṅ ba’o źes ’dzin pa thams cad kyis sgom źiṅ sgom pa maṅ du byas śiṅ maṅ du byas pa de daṅ de ñid la rtag pa daṅ | bde ba daṅ | sdug bsṅal daṅ | bdag ñid yod pa yin no źes rgyas par chos kyi de kho na ñid dam par nam par gźag pa las brtsams te phyin ci log tu gyur pa bstan pa ni mdo ji lta ba bźin du rtogs par bya’o ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864524bi' class='paragraph'>
+							It runs as follows: “Suppose, for instance, O monks, that in the hot season, the people, putting on the bathing underwear, were playing in the water with various ornaments and equipments for their individual pastime. Suppose then, someone would cast into the water the genuine Vaiḍūrya stone. Thus, in order to get this Vaiḍūrya stone, all the people, leaving aside their ornaments, would dive into the water.&nbsp;</span><span id='7864525bi' class='paragraph'>
+						 They would mistake pebbles and gravels in the pond for the real jewel, seize them and draw them out, thinking: I have got a jewel. After having stood on the bank of the pond, they would notice: It is not the real jewel at all! At that moment, the water of that pond would, owing to the power of that jewel, shine as if water itself were shining, and seeing that water sparkling, they would say: O the jewel is still there [in the water], and would notice how that jewel had great quality.&nbsp;</span><span id='7864526bi' class='paragraph'>
+						 Thereafter, one who is experienced and clever would really get the jewel out. In the same way, O brethren, ye who are ignorant of the real Essence of things, maintaining the general conception that all things are evanescent, that there is only suffering, and that everything is impersonal and impure, practise the meditation [on that conception] repeatedly, and increasingly. But all that was attempted by you, [ye should keep in mind], is [in reality] of no use.&nbsp;</span><span id='7864527bi' class='paragraph'>
+						 Therefore, O monks, ye should become skilful in order not to be determined by this [false conception] like the pebbles and gravels in the pond. O monks, with those elements which ye maintain to be in every case evanescent, suffering, impersonal, and impure, and on which ye practise the meditation [on that notion] repeatedly and increasingly, there exists [an Essence which represents] the Eternity, the Bliss, the Purity, and the Highest Unity”. Thus should be understood in detail, according to the Scripture, the teaching of the incorrectness with regard to the feature of the highest true nature of the elements.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861939bi' class='paragraph'>
+							tatra śūnyatāvikṣiptacittā ucyante navayānasaṃprasthitā bodhisattvās tathāgata garbhaśūnyatārthanayavipranaṣṭāḥ |&nbsp;</span><span id='7861940bi' class='paragraph'>
+						 ye bhāvavināśāya śūnyatāvimokṣamukham icchanti sata eva dharmasyottarakālam ucchedo vināśaḥ parinirvāṇam iti |&nbsp;</span><span id='7861941bi' class='paragraph'>
+						 ye vā punaḥ śūnyatopalambhena śūnyatāṃ pratisaranti śūnyatā nāma rūpādivyatirekeṇa kaścid bhāvo ’sti yam adhigamiṣyāmo bhāvayiṣyāma iti |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862802bi' class='paragraph'>
+							又散亂心失空眾生者。謂初發心菩薩。離空如來藏義。&nbsp;</span><span id='7862803bi' class='paragraph'>
+						 以失變壞物修行。名為空解脫門。此以何義。初發心菩薩起如是心。實有法斷滅後時得涅槃。如是菩薩失空如來藏修行。&nbsp;</span><span id='7862804bi' class='paragraph'>
+						 又復有人以空為有物。我應得空。又生如是心。離色等法別更有空。我應修行令得彼空。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863665bi' class='paragraph'>
+							de la stoṅ ba ñid las sems rnam par g-yeṅs pa ni theg pa la gsar du źugs pa’i byaṅ chub sems dpa’ stoṅ pa ñid kyi tshul du de bźin gśegs pa’i sñiṅ po las ñams pa dag la brjod do ||&nbsp;</span><span id='7863666bi' class='paragraph'>
+						 gaṅ dag yod pa’i chos ñid dus phyis rgyun ’chad ciṅ źig pa yoṅs su mya ṅan las ’das pa’o źes dṅos po gźig pa’i phyir stoṅ ba ñid kyi rnam par thar ba’i sgo ’dod pa’am |&nbsp;</span><span id='7863667bi' class='paragraph'>
+						 yaṅ gaṅ dag gaṅ źig rtogs par bya ba daṅ | bsgom par bya ba stoṅ ba ñid ces bya ba gzugs la sogs pa las tha dad pa’i dṅos po yod pa yin no źes stoṅ pa ñid la dmigs pas stoṅ pa ñid la brten pa’o ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864528bi' class='paragraph'>
+							Lastly, ‘those whose mind has deviated from the conception of Non-substantiality’ denotes the Bodhisattvas who have recently entered the Vehicle, [since] they are deprived of [the cognition of] the Matrix of the Tathāgata in regard to the true meaning of Non-substantiality.&nbsp;</span><span id='7864529bi' class='paragraph'>
+						 They are the people who look toward Non-substantiality as the medium of Liberation in order to destroy the substance, thinking that the perfect Nirvāṇa means the Extinction, i.e. the destruction of the elements [for the Phenomenal Existence] in future.&nbsp;</span><span id='7864530bi' class='paragraph'>
+						 There are also some people among them who think that there is something substantial called ‘the Non-substantiality’ which is quite different from ‘form’ and other [elements], and that is the one which we should understand, upon which we should meditate, and, fancying Non-substantiality in this way, they are persuaded of Non-substantiality.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861942bi' class='verse'>
+							tatra katamaḥ sa tathāgatagarbhaśūnyatārthanaya ucyate |<br />nāpaneyam ataḥ kiṃcid upaneyaṃ na kiṃcana |<br />draṣṭavyaṃ bhūtato bhūtaṃ bhūtadarśī vimucyate || 154 ||&nbsp;</span><span id='7861943bi' class='verse'>
+						 śūnya āgantukair dhātuḥ savinirbhāgalakṣaṇaiḥ |<br />aśūnyo anuttarair dharmair avinirbhāgalakṣaṇaiḥ || 155 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862805bi' class='verse'>
+							彼人 不知空以何等法是如來藏。偈言不空如來藏 謂無上佛法不相捨離相不增減一法&nbsp;</span><span id='7862806bi' class='verse'>
+						 如來無為身 自性本來淨 客塵虛妄染 本來自性空&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863668bi' class='verse'>
+							de la stoṅ ba ñid kyi tshul du brjod pa de bźin gśegs pa’i sñiṅ po gaṅ źe na | ’di la bsal bya ci yaṅ med || gźag par bya ba cuṅ zad med || yaṅ dag ñid la yaṅ dag lta || yaṅ dag mthoṅ nas rnam par grol ||&nbsp;</span><span id='7863669bi' class='verse'>
+						 rnam dbyer bcas pa’i mtshan ñid can || glo bur dag gis khams stoṅ gi || rnam dbyer med pa’i mtshan ñid can || bla med chos kyis stoṅ ma yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864531bi' class='verse'>
+							(&sect;3. The True Conception of the Matrix of the Tathāgata as Representing Non-substantiality.) Then how is what is called here ‘[the cognition of] the Matrix of the Tathāgata in regard to the true meaning of Non-substantiality’? Here there is nothing to be removed And absolutely nothing to be added; The Truth should be perceived as it is, And he who sees the Truth becomes liberated. || 154 ||&nbsp;</span><span id='7864532bi' class='verse'>
+						 The Essence [of the Buddha] is [by nature] devoid Of the accidental [pollutions] which differ from it; But it is by no means devoid of the highest properties Which are, Essentially, indivisible from it. || 155 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861944bi' class='paragraph'>
+							kim anena paridīpitam | yato na kiṃcid apaneyam asty ataḥ prakṛtipariśuddhāt tathāgatadhātoḥ saṃkleśanimittam āgantukamalaśūnyatāprakṛtitvād asya | nāpy atra kiṃcid upaneyam asti vyavadānanimittam avinirbhāgaśuddhadharmaprakṛtitvāt |&nbsp;</span><span id='7861945bi' class='paragraph'>
+						 tata ucyate | śūnyas tathāgatagarbho vinirbhāgair muktajñaiḥ sarvakleśakośaiḥ | aśūnyo gaṅgānadīvālikā vyativṛttair avinirbhāgair amuktajñair acintyair buddhadharmair iti |&nbsp;</span><span id='7861946bi' class='paragraph'>
+						 evaṃ yad yatra nāsti tat tena śūnyam iti samanupaśyati | yat punar atrāvaśiṣṭaṃ bhavati tat sad ihāstīti yathābhūtaṃ prajānāti | samāropāpavādāntaparivarjanād aparyantaṃ śūnyatālakṣaṇam anena ślokadvayena paridīpitam |&nbsp;</span><span id='7861947bi' class='paragraph'>
+						 tatra yeṣām itaḥ śūnyatārthanayād bahiścittaṃ vikṣipyate visarati na samādhīyate naikāgrībhavati tena te śūnyatāvikṣiptacittā ucyante | na hi paramārthaśūnyatājñānamukham antareṇa śakyate ’vikalpo dhātur adhigantuṃ sākṣātkartum |&nbsp;</span><span id='7861948bi' class='paragraph'>
+						 idaṃ ca saṃdhāyoktam | tathāgatagarbhajñānam eva tathāgatānāṃ śūnyatājñānam | tathāgatagarbhaś ca sarvaśrāvakapratyeka buddhair adṛṣṭapūrvo ’nadhigatapūrva iti vistaraḥ |&nbsp;</span><span id='7861949bi' class='paragraph'>
+						 sa khalv eṣa tathāgatagarbho yathā dharmadhātugarbhas tathā satkāyadṛṣṭipatitānām agocara ity uktaṃ dṛṣṭipratipakṣatvād dharma dhātoḥ |&nbsp;</span><span id='7861950bi' class='paragraph'>
+						 yathā dharmakāyo lokottaradharmagarbhas tathā viparyāsābhiratānām agocara ity uktam anityādilokadharmapratipakṣeṇa lokottaradharmaparidīpanāt |&nbsp;</span><span id='7861951bi' class='paragraph'>
+						 yathā prakṛtipariśuddhadharmagarbhas tathā śūnyatāvikṣiptānām agocara ity uktam āgantukamalaśūnyatāprakṛti tvād viśuddhiguṇadharmāṇām avinirbhāgalokottaradharmakāyaprabhāvitānām iti |&nbsp;</span><span id='7861952bi' class='paragraph'>
+						 tatra yad ekanayadharmadhātvasaṃbhedajñānamukham āgamya lokottaradharmakāyaprakṛtipariśuddhi vyavalokanam idam atra yathābhūtajñānadarśanam abhipretaṃ yena daśabhūmisthitā bodhisattvās tathāgatagarbham īṣat paśyantīty uktam |&nbsp;</span><span id='7861953bi' class='paragraph'>
+						 evaṃ hy āha | chidrābhre nabhasīva bhāskara iha tvaṃ śuddhabuddhīkṣaṇair āryair apy avalokyase na sakalaḥ prādeśikībuddhibhiḥ | jñeyānantanabhastalapravisṛtaṃ te dharmakāyaṃ tu te sākalyena vilokayanti bhagavan yeṣām anantā matir iti ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862807bi' class='paragraph'>
+							此偈明何義。不減一法者。不減煩惱。不增一法者。真如性中不增一法。以不捨離清淨體故偈言不相捨離相不增減一法故。&nbsp;</span><span id='7862808bi' class='paragraph'>
+						 是故聖者勝鬘經言。世尊。有二種如來藏空智。世尊。空如來藏。若離若脫若異一切煩惱藏。世尊。不空如來藏。過於恆沙不離不脫不異。不思議佛法故。&nbsp;</span><span id='7862809bi' class='paragraph'>
+						 如是以何等煩惱以何等處無。如是如實見知名為空智。又何等諸佛法。何處具足有。如是如實見知名不空智。如是明離有無二邊如實知空相。此二偈中明如是義。&nbsp;</span><span id='7862810bi' class='paragraph'>
+						 又眾生若離如是空智。彼人則是佛境界外 名不相應。不得定不得一心。以是義故。名散亂心失空眾生。何以故。以離第一義空智門無分別境界不可得證不可得見。&nbsp;</span><span id='7862811bi' class='paragraph'>
+						 是故聖者 勝鬘經言。世尊。如來藏智名為空智。世尊。如來藏空智者。一切聲聞辟支佛等。本所不見。本所不得。本所不證。本所不會。世尊。一切苦 滅唯佛得證。壞一切煩惱藏。修一切滅苦道故。&nbsp;</span><span id='7862812bi' class='paragraph'>
+						 如是此如來藏。以法界藏故。身見等眾生不能得見。已說以身見相對治真實法未現前故。&nbsp;</span><span id='7862813bi' class='paragraph'>
+						 又如是出世間法身如來藏。非顛倒眾生境界。已說以無常等世間法對治出世間法界未現前故。&nbsp;</span><span id='7862814bi' class='paragraph'>
+						 又如是自性清淨法界 如來空藏。非散亂心失空眾生境界。已說以煩惱垢客塵染。空自性清淨功德法不相捨離。出世間法身得名故。&nbsp;</span><span id='7862815bi' class='paragraph'>
+						 此明何義。又依一味等味法界無差別智門觀察出世間自性清淨法身。是名如實知見真如。是故經說。十住菩薩唯能少分見如來藏。何況凡夫二乘人等。&nbsp;</span><span id='7862816bi' class='paragraph'>
+						 是故偈言 譬如薄雲中 見虛空有日 淨慧諸聖人 見佛亦如是 聲聞辟支佛 如無眼目者 不能觀如來 如盲不見日 所知一切法 有無量無邊 遍虛空法界 無量智能見 諸如來法身 充滿一切處 佛智慧能見 以無量智故&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863670bi' class='paragraph'>
+							’dis ci bstan źe na | gaṅ gi phyir raṅ bźin gyis yoṅs su dag pa de bźin gśegs || pa’i khams ’di las bsal bar bya ba kun nas ñon moṅs pa’i rgyu mtshan ni ’ga’ yaṅ med la | glo bur ba’i dri ma daṅ bral ba ni ’di’i raṅ bźin yin pa’i phyir ro || ’di la rnam par byaṅ ba’i rgyu mtshan can gźag par bya ba yaṅ cuṅ zad kyaṅ yod pa ma yin te | rnam par dbye ba med pa’i chos dag pa’i chos ñid ni raṅ bźin yin pa’i phyir ro ||&nbsp;</span><span id='7863671bi' class='paragraph'>
+						 des na de bźin gśegs pa’i sñiṅ po ni | rnam par dbye ba yod pa | bral śes pa | ñon moṅs pa’i sbubs thams cad kyis ni stoṅ ba yin la | rnam par dbye ba med pa | bral mi śes pa | bsam gyis mi khyab pa’i saṅs rgyas kyi chos gaṅ gā’i kluṅ gi bye ma las ’das pa ni mi stoṅ ṅo źes gsuṅs so ||&nbsp;</span><span id='7863672bi' class='paragraph'>
+						 de ltar na gaṅ źig gaṅ na med pa de ni des stoṅ ṅo źes yaṅ dag par rjes su mthoṅ la | gaṅ źig lhag par gyur ba de ni de la rtag par yod do źes yaṅ dag pa ji lta ba bźin du śes so || tshig su bcad pa ’di gñis kyis ni sgro ’dogs pa daṅ skur ba ’debs pa’i mtha’ daṅ bral ba’i phyir | phyin ci ma log pa stoṅ pa ñid kyi mtshan ñid bstan to ||&nbsp;</span><span id='7863673bi' class='paragraph'>
+						 de la gaṅ źig stoṅ ba ñid kyi tshul ’di las sems phyi rol tu rnam par g-yeṅ źiṅ rnam par ’phro la mñam par mi ’jog ciṅ rtse gcig tu mi ’gyur ba des na de dag stoṅ ba ñid las sems rnam par g-yeṅs pa źes brjod do || de la don dam pa stoṅ ba ñid kyi ye śes med par ni rnam par rtog pa med pa’i dag pa’i dbyiṅs rtogs śiṅ mṅon par ’du bya bar mi nus so |&nbsp;</span><span id='7863674bi' class='paragraph'>
+						 ’di la dgoṅs nas gsuṅs pa ni | de bźin gśegs pa’i sñiṅ po’i ye śes ñid ni de bźin gśegs pa rnams kyi stoṅ ba ñid kyi ye śes yin la | de bźin gśegs pa’i sñiṅ po de yaṅ ñan thos daṅ raṅ saṅs rgyas thams cad kyis sṅar ma mthoṅ ma rtogs pa’o źes rgyas par gsuṅs so ||&nbsp;</span><span id='7863675bi' class='paragraph'>
+						 de bźin gśegs pa’i sñiṅ po ji ltar chos kyi sku’i sñiṅ po yin pa de ltar ni | ’jig tshogs la lta bar lhuṅ ba rnams kyi spyod yul ma yin par brjod do || chos kyi dbyiṅs ni lta ba’i gñen po yin pa’i phyir ro ||&nbsp;</span><span id='7863676bi' class='paragraph'>
+						 ji ltar chos kyi sku ’jig rten las ’das pa’i sñiṅ po yin pa de ltar ni phyin ci log la mṅon par dga’ ba rnams kyi spyod yul ma yin no źes brjod do || ’jig rten las ’das pa’i chos kyi sku ni mi rtag pa la sogs pa ’jig rten pa’i chos kyi gñen por bstan pa’i phyir ro ||&nbsp;</span><span id='7863677bi' class='paragraph'>
+						 ji ltar chos kyi sku yoṅs su dag pa’i chos kyi sñiṅ po yin pa de ltar ni stoṅ ba ñid las sems rnam par gyeṅs pa rnams kyi spyod yul ma yin no źes brjod do || de rnam par dag pa’i yon tan gyis chos rnam par dbye ba med pa ’jig rten las ’das pa’i chos kyi skus rab tu phye ba rnams ni glo bur gyi dri mas stoṅ ba’i raṅ bźin yin pa’i phyir ro ||&nbsp;</span><span id='7863678bi' class='paragraph'>
+						 de la tshul gcig po chos kyi dbyiṅs daṅ tha mi dad pa’i ye śes kyi sgo rtogs nas | ’jig rten las ’das pa’i chos kyi sku’i raṅ bźin gyis yoṅs su dag pa la lta ba gaṅ yin pa ’di ni ’dir gaṅ gis sa bcu la gnas pa’i byaṅ chub sems dpas de bźin gśegs pa’i sñiṅ po cuṅ zad mthoṅ ṅo źes gsuṅs pas yaṅ dag pa ji lta ba bźin gyi ye śes kyis kun mthoṅ bar ’dod do ||&nbsp;</span><span id='7863679bi' class='paragraph'>
+						 de skad du | sprin mthoṅ mkha’ la ñi bźin ’dir khyod phyogs gcig blo gros can || blo mig dag pa’i ’phags rnams kyis kyaṅ thams cad mthoṅ ma lags || bcom ldan ’das khyod chos sku gaṅ dag blo gros mtha’ yas ba || śes bya mtha’ med mkha’ dbyiṅs khyab pa de dag gis kun mthoṅ || źes gsuṅs so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864533bi' class='paragraph'>
+							What is explained by this? There is no defiling element which is to be removed from this Essence of the Tathāgata, perfectly purified by nature, since it is by nature devoid of accidental pollutions. Also, there is no purifying element which is to be added to it, since it is by nature indivisible from the pure properties [of the Buddha].&nbsp;</span><span id='7864534bi' class='paragraph'>
+						 On account of this point, it is said [in the Scripture]: “The Matrix of the Tathāgata is devoid of all the sheath of Defilements which are differentiated and separated [from the Absolute Essence]. The Matrix of the Tathāgata is by no means devoid of the Buddha’s Properties which are indivisible, inseparable [from the Absolute Essence], inconceivable and far beyond the sands of the Gaṅgā in number”.&nbsp;</span><span id='7864535bi' class='paragraph'>
+						 Thus, wherever something is lacking, this is observed as ‘void’ in that place, whatever remains there, one knows that this being must exist here: This is really the true [conception of Non-substantioality]. [Thus], by removing the extremities of affirmation and negation, the real characteristic of Non-substantiality is explained by these two verses.&nbsp;</span><span id='7864536bi' class='paragraph'>
+						 Now, those individuals whose mind has deviated from this principle of Non-substantiality, and, turning in various directions, neither meditates nor concentrates upon it, we call them by this very reason ‘those whose mind has deviated from [the true conception of] Non-substantiality. Indeed, without the introduction to the knowledge of the highest truth of Non-substantiality, nobody can attain or realize the non-discriminative Sphere [of the Tathāgata].&nbsp;</span><span id='7864537bi' class='paragraph'>
+						 Implying this point, it has been said: “The Wisdom cognizing the Matrix of the Tathāgata is nothing but the Wisdom about Non-substantiality of the Buddhas. And this Matrix of the Tathāgata has never been seen, has never been realized by the Śrāvakas and the Pratyekabuddhas” &c.&nbsp;</span><span id='7864538bi' class='paragraph'>
+						 Now, this Matrix of the Tathāgata, inasmuch as it represents the Matrix of the Absolute Essence, is said to be a sphere not accessible to ‘those who have fallen into the erroneous conception maintaining the existence of individuality’, because the Absolute Essence is an antidote against such erroneous conception.&nbsp;</span><span id='7864539bi' class='paragraph'>
+						 Inasmuch as it represents the Matrix of the Absolute Body, or the Matrix of the Transcendental Element, it is said not to be accessible to ‘those who are attached to delusion’ since the Transcendental Element is spoken of as being an antidote against the mundane elements of such nature as evanescence, etc.&nbsp;</span><span id='7864540bi' class='paragraph'>
+						 [Furthermore], inasmuch as it represents the Matrix of the properties, perfectly pure by nature, [the Matrix of the Tathāgata] is said not to be accessible to ‘those whose mind has deviated from Non-substantiality’ since the [Buddha’s] pure virtuous Properties, being represented by the Transcendental Absolute Body which is indivisible from them, are by nature devoid of accidental pollutions.&nbsp;</span><span id='7864541bi' class='paragraph'>
+						 Here, to perceive that the Transcendental Absolute Body is perfectly pure by nature, by means of the cognition of the unique introduction to the Wisdom which is Essentially connected with the Absolute Essence, implies here the True Intuition. On account of this perception, it is said that [even] those Bodhisattvas who are abiding in their 10 Stages can [but] slightly understand the Matrix of the Tathāgata.&nbsp;</span><span id='7864542bi' class='paragraph'>
+						 Indeed, thus it is said: “[ O Lord], thou art unable to be seen fully, Just as here the sun, in the sky with torn clouds, Even by the Saints, of pure intellectual vision, Since their intellect is still partial; O Lord, only those whose Wisdom is illimitable Can completely perceive thy Absolute Body Which pervades everything knowable That is infinite like space”.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class=''><span id='bi' class=''>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "";
+							kilderef = "  ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=56ac5bda-5cc5-11df-870c-00215aecadea</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

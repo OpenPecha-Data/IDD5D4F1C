@@ -1,0 +1,109 @@
+id: 0d221fdfc6f540bd8132eb5200461305
+annotation_type: index
+revision: '00001'
+annotations:
+  16016eef58e146a9b6c4deb506cb0695:
+    base: f1FBF.txt
+    span:
+      start: 0
+      end: 16297
+  3dfeec1caf4047c0a59949c32e1e2a7a:
+    base: f2044.txt
+    span:
+      start: 0
+      end: 2021
+  ace22eea21c74eb693c74a42a49444a6:
+    base: f26AC.txt
+    span:
+      start: 0
+      end: 5907
+  6a7515516a8a4f97b5bd80e2426711b4:
+    base: f3122.txt
+    span:
+      start: 0
+      end: 6201
+  53ea78f4515744bba84ee157016e3362:
+    base: f32D3.txt
+    span:
+      start: 0
+      end: 7961
+  ffd28fdbc8704a4eb630b6230595ef70:
+    base: f3B44.txt
+    span:
+      start: 0
+      end: 659
+  d06f3fac15a84a7694056dabbb360648:
+    base: f4660.txt
+    span:
+      start: 0
+      end: 6468
+  aa395a27f0d641fe82571f4fbba2da9f:
+    base: f5F8F.txt
+    span:
+      start: 0
+      end: 18613
+  844c8afd91f84b89b3298847d8611dcd:
+    base: f66EE.txt
+    span:
+      start: 0
+      end: 1839
+  34a4fc4558ce4249a634189b8d32e1ab:
+    base: f74B3.txt
+    span:
+      start: 0
+      end: 9509
+  1010936de6bf4a61ac3e8a65a2b4fac9:
+    base: f763C.txt
+    span:
+      start: 0
+      end: 5232
+  16aa1ba2560e40389e7350ab5425cd9b:
+    base: f76CC.txt
+    span:
+      start: 0
+      end: 53
+  45ce124727114de897799b76be6416c2:
+    base: f83CC.txt
+    span:
+      start: 0
+      end: 5203
+  7378be704e5c4db98e8550b6378b6a2c:
+    base: f8C77.txt
+    span:
+      start: 0
+      end: 55835
+  4649cb64553042daad4ae454c9a1017e:
+    base: f9595.txt
+    span:
+      start: 0
+      end: 988
+  dce9265e45c049ef862e52efdb085ec6:
+    base: fB03B.txt
+    span:
+      start: 0
+      end: 9129
+  c31e28b57e3147a9a91f5609b548ffb8:
+    base: fB4BA.txt
+    span:
+      start: 0
+      end: 123
+  5806f82523694a7fa829f48040b93abc:
+    base: fBCC5.txt
+    span:
+      start: 0
+      end: 12421
+  1ada3431df404ca78f614d218ea825d9:
+    base: fC8B2.txt
+    span:
+      start: 0
+      end: 692
+  524cd398c48b415498f75e6092f77c98:
+    base: fCBB6.txt
+    span:
+      start: 0
+      end: 2022
+  22a5931caad34e3388c5826e746e7d2f:
+    base: fD75E.txt
+    span:
+      start: 0
+      end: 6956

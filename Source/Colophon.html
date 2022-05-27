@@ -1,0 +1,411 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1125' accesskey='1'>Asaṅga/Maitreya: Ratnagotravibhāga</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Asaṅga/Maitreya: Ratnagotravibhāga<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5671]" value="5671" id="lancheckbox" checked >Sanskrit: San: Johnston (1950)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5672]" value="5672" id="lancheckbox" checked >Chinese: Chi: T. 1611</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5673]" value="5673" id="lancheckbox" checked >Tibetan: Tib: Tg phi</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5674]" value="5674" id="lancheckbox" checked >English: Eng: Takasaki (1966)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1125">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1125">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1125'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1125">Search in Asaṅga/Maitreya: Ratnagotravibhāga</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1125'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1125'>Asaṅga/Maitreya: Ratnagotravibhāga</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="134678.Title|134679.Preface|134680.ChapterI:TheMatrixoftheTathāgata|134692.ChapterII:TheMatrixoftheTathāgata|134695.ChapterIII:ThePropertiesoftheBuddha|134698.ChapterIV:TheActsofTheBuddha|134701.ChapterV:TheMeritsofFaith|134703.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134678.Title" border=0 hspace=2><a id="href_134678.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943437&level=1&cid=844383" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134679.Preface" border=0 hspace=2><a id="href_134679.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943438&level=1&cid=844384" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134680.ChapterI:TheMatrixoftheTathāgata','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134680.ChapterI:TheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134680.ChapterI:TheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943439&level=1&cid=844385" class="ajax_tree0">Chapter I: The Matrix of the Tathāgata
+</td></tr></table>
+<div style="display:none;"  id="div_134680.ChapterI:TheMatrixoftheTathāgata">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134681.I.Introduction" border=0 hspace=2><a id="href_134681.I.Introduction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943440&level=2&cid=844386" class="ajax_tree1">I. Introduction
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134682.II.TheJeweloftheBuddha" border=0 hspace=2><a id="href_134682.II.TheJeweloftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943480&level=2&cid=844403" class="ajax_tree1">II. The Jewel of the Buddha
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134683.III.TheJeweloftheDoctrine" border=0 hspace=2><a id="href_134683.III.TheJeweloftheDoctrine" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943510&level=2&cid=844411" class="ajax_tree1">III. The Jewel of the Doctrine
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134684.IV.TheJeweloftheCommunity" border=0 hspace=2><a id="href_134684.IV.TheJeweloftheCommunity" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943536&level=2&cid=844424" class="ajax_tree1">IV. The Jewel of the Community
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134685.V.TheThreeJewelsasRefuges" border=0 hspace=2><a id="href_134685.V.TheThreeJewelsasRefuges" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943558&level=2&cid=844435" class="ajax_tree1">V. The Three Jewels as Refuges
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134686.VI.TheGermOfThreeJewelsInFourAspects" border=0 hspace=2><a id="href_134686.VI.TheGermOfThreeJewelsInFourAspects" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943581&level=2&cid=844445" class="ajax_tree1">VI. The Germ Of Three Jewels In Four Aspects
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134687.VII.TheSermon:AllLivingBeingsarepossessedofTheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134687.VII.TheSermon:AllLivingBeingsarepossessedofTheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943612&level=2&cid=844453" class="ajax_tree1">VII. The Sermon: All Living Beings are possessed of The Matrix of the Tathāgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134688.VIII.AnalysisoftheGermfrom10PointsofView" border=0 hspace=2><a id="href_134688.VIII.AnalysisoftheGermfrom10PointsofView" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943617&level=2&cid=844457" class="ajax_tree1">VIII. Analysis of the Germ from 10 Points of View
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134689.IX.The9IllustrationsontheGermCoveredwithDefilements" border=0 hspace=2><a id="href_134689.IX.The9IllustrationsontheGermCoveredwithDefilements" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943869&level=2&cid=844524" class="ajax_tree1">IX. The 9 Illustrations on the Germ Covered with Defilements
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134690.X.TheEssentialCharacteristicsoftheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134690.X.TheEssentialCharacteristicsoftheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943963&level=2&cid=844551" class="ajax_tree1">X. The Essential Characteristics of the Matrix of the Tathāgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134691.XI.ThePurposeofInstruction" border=0 hspace=2><a id="href_134691.XI.ThePurposeofInstruction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943995&level=2&cid=844559" class="ajax_tree1">XI. The Purpose of Instruction
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134692.ChapterII:TheMatrixoftheTathāgata','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134692.ChapterII:TheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134692.ChapterII:TheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944010&level=1&cid=844563" class="ajax_tree0">Chapter II: The Matrix of the Tathāgata
+</td></tr></table>
+<div style="display:none;"  id="div_134692.ChapterII:TheMatrixoftheTathāgata">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134693.XII.GeneralCharacteristicsoftheRealityFreefromPollutions" border=0 hspace=2><a id="href_134693.XII.GeneralCharacteristicsoftheRealityFreefromPollutions" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944011&level=2&cid=844564" class="ajax_tree1">XII. General Characteristics of the Reality Free from Pollutions
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134694.XIII.8PointsontheUndefiledReality" border=0 hspace=2><a id="href_134694.XIII.8PointsontheUndefiledReality" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944020&level=2&cid=844569" class="ajax_tree1">XIII. 8 Points on the Undefiled Reality
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134695.ChapterIII:ThePropertiesoftheBuddha','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134695.ChapterIII:ThePropertiesoftheBuddha" border=0 hspace=2><a id="href_134695.ChapterIII:ThePropertiesoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944101&level=1&cid=844585" class="ajax_tree0">Chapter III: The Properties of the Buddha
+</td></tr></table>
+<div style="display:none;"  id="div_134695.ChapterIII:ThePropertiesoftheBuddha">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134696.XIV.GeneralCharacteristicsOfTheBuddha’sProperties" border=0 hspace=2><a id="href_134696.XIV.GeneralCharacteristicsOfTheBuddha’sProperties" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944102&level=2&cid=844586" class="ajax_tree1">XIV. General Characteristics Of The Buddha’s Properties
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134697.XV.64PropertiesoftheBuddha" border=0 hspace=2><a id="href_134697.XV.64PropertiesoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944107&level=2&cid=844589" class="ajax_tree1">XV. 64 Properties of the Buddha
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134698.ChapterIV:TheActsofTheBuddha','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134698.ChapterIV:TheActsofTheBuddha" border=0 hspace=2><a id="href_134698.ChapterIV:TheActsofTheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944151&level=1&cid=844599" class="ajax_tree0">Chapter IV: The Acts of The Buddha
+</td></tr></table>
+<div style="display:none;"  id="div_134698.ChapterIV:TheActsofTheBuddha">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134699.XVI.GeneralCharacteristicsoftheActsoftheBuddha" border=0 hspace=2><a id="href_134699.XVI.GeneralCharacteristicsoftheActsoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944152&level=2&cid=844600" class="ajax_tree1">XVI. General Characteristics of the Acts of the Buddha
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134700.XVII.9IllustrationsoftheBuddha’sActs" border=0 hspace=2><a id="href_134700.XVII.9IllustrationsoftheBuddha’sActs" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944166&level=2&cid=844603" class="ajax_tree1">XVII. 9 Illustrations of the Buddha’s Acts
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134701.ChapterV:TheMeritsofFaith','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134701.ChapterV:TheMeritsofFaith" border=0 hspace=2><a id="href_134701.ChapterV:TheMeritsofFaith" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944267&level=1&cid=844620" class="ajax_tree0">Chapter V: The Merits of Faith
+</td></tr></table>
+<div style="display:none;"  id="div_134701.ChapterV:TheMeritsofFaith">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134702.XVIII.TheMeritsofHavingFaithintheDoctrineoftheEssenceofBuddhahood" border=0 hspace=2><a id="href_134702.XVIII.TheMeritsofHavingFaithintheDoctrineoftheEssenceofBuddhahood" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944268&level=2&cid=844621" class="ajax_tree1">XVIII. The Merits of Having Faith in the Doctrine of the Essence of Buddhahood
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134703.Colophon" border=0 hspace=2><a id="href_134703.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944299&level=1&cid=844624" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('134703.Colophon|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1125&amp;mid=1944299&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125&amp;cid=844624&amp;mid=1944299&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125&amp;cid=844624&amp;mid=1944299&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='7862258'></div><div class='clear'></div><span id='7862258bi' class='chaptertitle'>
+							iti ratnagotravibhāge mahāyānottaratantraśāstre ’nuśaṃsādhikāro nāma pañcamaḥ paricchedaḥ ślokārthasaṃgrahavyākhyānataḥ samāptaḥ || 5 ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7862258";
+							kilderef = "Rgvbh San: Johnston (1950) 119,16-17  - San: Johnston (1950) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='7863121'></div><div class='clear'></div><span id='7863121bi' class='chaptertitle'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7863121";
+							kilderef = "Rgvbh Chi: T. 1611  - Chi: T. 1611 ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7863984'></div><div class='clear'></div><span id='7863984bi' class='chaptertitle'>
+							theg pa chen po rgyud bla ma’i bstan bcos || dkon mchog gi rigs rnam par dbye ba las phan yon gyi le’u ste lṅa ba’o || || tshigs su bcad pa’i don gyis bsdus pa’i bśad pa rdzogs so || ||<br />theg mchog dam chos rin chen bśad ’di las || bsam yas bsod nams bdag gis gaṅ thob pa || des ni ’gro kun theg mchog dam pa’i chos || rin chen dri ma med pa’i snod gyur cig || ’phags pa mgon po byams pas mdzad pa || theg pa chen po rgyud bla ma’i bstan bcos kyi rnam par bśad pa slob dpon thogs med kyis mdzad bdzad pa rdzogs so || || dpal groṅ khyer chen po dpe med kyi mkhas pa chen po bram ze rin chen rdo rje’i dbon po || paṇḍi ta mkhas pa chen po sad dza na daṅ | lo rtsā ba śākya’i dge sloṅ blo ldan śes rab kyis || groṅ khyer dpe med de ñid du bsgyur ba’o || ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7863984";
+							kilderef = "Rgvbh Tib: Tg phi 129a5-7  - Tib: Tg phi ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='7864847'></div><div class='clear'></div><span id='7864847bi' class='chaptertitle'>
+							Thus is finished the fifth chapter entitled ‘the Merits of Faith’ in the ANALYSIS OF THE GERM OF THE JEWELS, a Treatise on the Ultimate Doctrine of the Great Vehicle with the commentary [named] ‘the Summary of meaning of the ślokas’. || 5 ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7864847";
+							kilderef = "Rgvbh Eng: Takasaki (1966) 390  - Eng: Takasaki (1966) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=57076d04-5cc5-11df-870c-00215aecadea</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

@@ -1,0 +1,759 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1125' accesskey='1'>Asaṅga/Maitreya: Ratnagotravibhāga</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Asaṅga/Maitreya: Ratnagotravibhāga<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5671]" value="5671" id="lancheckbox" checked >Sanskrit: San: Johnston (1950)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5672]" value="5672" id="lancheckbox" checked >Chinese: Chi: T. 1611</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5673]" value="5673" id="lancheckbox" checked >Tibetan: Tib: Tg phi</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1125[5674]" value="5674" id="lancheckbox" checked >English: Eng: Takasaki (1966)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1125">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1125">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1125'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1125">Search in Asaṅga/Maitreya: Ratnagotravibhāga</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1125'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1125'>Asaṅga/Maitreya: Ratnagotravibhāga</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="134678.Title|134679.Preface|134680.ChapterI:TheMatrixoftheTathāgata|134692.ChapterII:TheMatrixoftheTathāgata|134695.ChapterIII:ThePropertiesoftheBuddha|134698.ChapterIV:TheActsofTheBuddha|134701.ChapterV:TheMeritsofFaith|134703.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134678.Title" border=0 hspace=2><a id="href_134678.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943437&level=1&cid=844383" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134679.Preface" border=0 hspace=2><a id="href_134679.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943438&level=1&cid=844384" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134680.ChapterI:TheMatrixoftheTathāgata','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134680.ChapterI:TheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134680.ChapterI:TheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943439&level=1&cid=844385" class="ajax_tree0">Chapter I: The Matrix of the Tathāgata
+</td></tr></table>
+<div style="display:none;"  id="div_134680.ChapterI:TheMatrixoftheTathāgata">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134681.I.Introduction" border=0 hspace=2><a id="href_134681.I.Introduction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943440&level=2&cid=844386" class="ajax_tree1">I. Introduction
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134682.II.TheJeweloftheBuddha" border=0 hspace=2><a id="href_134682.II.TheJeweloftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943480&level=2&cid=844403" class="ajax_tree1">II. The Jewel of the Buddha
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134683.III.TheJeweloftheDoctrine" border=0 hspace=2><a id="href_134683.III.TheJeweloftheDoctrine" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943510&level=2&cid=844411" class="ajax_tree1">III. The Jewel of the Doctrine
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134684.IV.TheJeweloftheCommunity" border=0 hspace=2><a id="href_134684.IV.TheJeweloftheCommunity" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943536&level=2&cid=844424" class="ajax_tree1">IV. The Jewel of the Community
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134685.V.TheThreeJewelsasRefuges" border=0 hspace=2><a id="href_134685.V.TheThreeJewelsasRefuges" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943558&level=2&cid=844435" class="ajax_tree1">V. The Three Jewels as Refuges
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134686.VI.TheGermOfThreeJewelsInFourAspects" border=0 hspace=2><a id="href_134686.VI.TheGermOfThreeJewelsInFourAspects" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943581&level=2&cid=844445" class="ajax_tree1">VI. The Germ Of Three Jewels In Four Aspects
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134687.VII.TheSermon:AllLivingBeingsarepossessedofTheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134687.VII.TheSermon:AllLivingBeingsarepossessedofTheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943612&level=2&cid=844453" class="ajax_tree1">VII. The Sermon: All Living Beings are possessed of The Matrix of the Tathāgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134688.VIII.AnalysisoftheGermfrom10PointsofView" border=0 hspace=2><a id="href_134688.VIII.AnalysisoftheGermfrom10PointsofView" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943617&level=2&cid=844457" class="ajax_tree1">VIII. Analysis of the Germ from 10 Points of View
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134689.IX.The9IllustrationsontheGermCoveredwithDefilements" border=0 hspace=2><a id="href_134689.IX.The9IllustrationsontheGermCoveredwithDefilements" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943869&level=2&cid=844524" class="ajax_tree1">IX. The 9 Illustrations on the Germ Covered with Defilements
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134690.X.TheEssentialCharacteristicsoftheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134690.X.TheEssentialCharacteristicsoftheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943963&level=2&cid=844551" class="ajax_tree1">X. The Essential Characteristics of the Matrix of the Tathāgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134691.XI.ThePurposeofInstruction" border=0 hspace=2><a id="href_134691.XI.ThePurposeofInstruction" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1943995&level=2&cid=844559" class="ajax_tree1">XI. The Purpose of Instruction
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134692.ChapterII:TheMatrixoftheTathāgata','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134692.ChapterII:TheMatrixoftheTathāgata" border=0 hspace=2><a id="href_134692.ChapterII:TheMatrixoftheTathāgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944010&level=1&cid=844563" class="ajax_tree0">Chapter II: The Matrix of the Tathāgata
+</td></tr></table>
+<div style="display:none;"  id="div_134692.ChapterII:TheMatrixoftheTathāgata">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134693.XII.GeneralCharacteristicsoftheRealityFreefromPollutions" border=0 hspace=2><a id="href_134693.XII.GeneralCharacteristicsoftheRealityFreefromPollutions" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944011&level=2&cid=844564" class="ajax_tree1">XII. General Characteristics of the Reality Free from Pollutions
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134694.XIII.8PointsontheUndefiledReality" border=0 hspace=2><a id="href_134694.XIII.8PointsontheUndefiledReality" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944020&level=2&cid=844569" class="ajax_tree1">XIII. 8 Points on the Undefiled Reality
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134695.ChapterIII:ThePropertiesoftheBuddha','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134695.ChapterIII:ThePropertiesoftheBuddha" border=0 hspace=2><a id="href_134695.ChapterIII:ThePropertiesoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944101&level=1&cid=844585" class="ajax_tree0">Chapter III: The Properties of the Buddha
+</td></tr></table>
+<div style="display:none;"  id="div_134695.ChapterIII:ThePropertiesoftheBuddha">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134696.XIV.GeneralCharacteristicsOfTheBuddha’sProperties" border=0 hspace=2><a id="href_134696.XIV.GeneralCharacteristicsOfTheBuddha’sProperties" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944102&level=2&cid=844586" class="ajax_tree1">XIV. General Characteristics Of The Buddha’s Properties
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134697.XV.64PropertiesoftheBuddha" border=0 hspace=2><a id="href_134697.XV.64PropertiesoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944107&level=2&cid=844589" class="ajax_tree1">XV. 64 Properties of the Buddha
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134698.ChapterIV:TheActsofTheBuddha','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134698.ChapterIV:TheActsofTheBuddha" border=0 hspace=2><a id="href_134698.ChapterIV:TheActsofTheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944151&level=1&cid=844599" class="ajax_tree0">Chapter IV: The Acts of The Buddha
+</td></tr></table>
+<div style="display:none;"  id="div_134698.ChapterIV:TheActsofTheBuddha">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134699.XVI.GeneralCharacteristicsoftheActsoftheBuddha" border=0 hspace=2><a id="href_134699.XVI.GeneralCharacteristicsoftheActsoftheBuddha" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944152&level=2&cid=844600" class="ajax_tree1">XVI. General Characteristics of the Acts of the Buddha
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134700.XVII.9IllustrationsoftheBuddha’sActs" border=0 hspace=2><a id="href_134700.XVII.9IllustrationsoftheBuddha’sActs" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944166&level=2&cid=844603" class="ajax_tree1">XVII. 9 Illustrations of the Buddha’s Acts
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134701.ChapterV:TheMeritsofFaith','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134701.ChapterV:TheMeritsofFaith" border=0 hspace=2><a id="href_134701.ChapterV:TheMeritsofFaith" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944267&level=1&cid=844620" class="ajax_tree0">Chapter V: The Merits of Faith
+</td></tr></table>
+<div style="display:none;"  id="div_134701.ChapterV:TheMeritsofFaith">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134702.XVIII.TheMeritsofHavingFaithintheDoctrineoftheEssenceofBuddhahood" border=0 hspace=2><a id="href_134702.XVIII.TheMeritsofHavingFaithintheDoctrineoftheEssenceofBuddhahood" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944268&level=2&cid=844621" class="ajax_tree1">XVIII. The Merits of Having Faith in the Doctrine of the Essence of Buddhahood
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134703.Colophon" border=0 hspace=2><a id="href_134703.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1125&mid=1944299&level=1&cid=844624" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('134694.XIII.8PointsontheUndefiledReality|134692.ChapterII:TheMatrixoftheTathāgata|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1125&amp;mid=1944020&amp;level=2">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125&amp;cid=844569&amp;mid=1944020&amp;level=2">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1125&amp;cid=844569&amp;mid=1944020&amp;level=2">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='7861979'></div><div class='clear'></div><span id='7861979bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='7862842'></div><div class='clear'></div><span id='7862842bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7863705'></div><div class='clear'></div><span id='7863705bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='7864568'></div><div class='clear'></div><span id='7864568bi' class='paragraph'>
+							XIII. 8 POINTS ON THE UNDEFILED REALITY&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861980bi' class='paragraph'>
+							tatra svabhāvārthaṃ hetvarthaṃ cārabhya buddhatve tatprāptyupāye ca ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862843bi' class='paragraph'>
+							又依實體依因。於佛地中及得彼方便因故。說三偈&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863706bi' class='paragraph'>
+							de la saṅs rgyas ñid daṅ de thob pa’i thabs su gyur ba ṅo bo’i don daṅ rgyu’i don las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864569bi' class='paragraph'>
+							Now, we have one śloka on Buddhahood and the means for its attainment referring to the subjects of ‘own nature’ and ‘cause’ respectively.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861981bi' class='verse'>
+							buddhatvaṃ prakṛtiprabhāsvaram iti proktaṃ yad āgantukakleśajñeyaghanābhrajālapaṭalacchannaṃ ravivyomavat |<br />sarvair buddhaguṇair upetam amalair nityaṃ dhruvaṃ śāśvataṃ dharmāṇāṃ tadakalpanapravicayajñānāśrayād āpyate || 3 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862844bi' class='verse'>
+							向說佛法身 自性清淨體 為諸煩惱垢 客塵所染污 譬如虛空中 離垢淨日月 為彼厚密雲 羅網之所覆 佛功德無垢 常恆及不變 不分別諸法 得無漏真智&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863707bi' class='verse'>
+							raṅ bźin ’od gsal źes brjod gaṅ yin ñi ma mkha’ bźin glo bur gyi | ñon moṅs śes bya’i sprin tshogs stug po’i sgrib pa yis ni bsgribs gyur ba || dri med saṅs rgyas yon tan kun ldan rtag brtan g-yuṅ druṅ saṅs rgyas ñid || de ni chos la mi rtog rnam ’byed ye śes dag la brten nas ’thob ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864570bi' class='verse'>
+							(Kārikā 1) Buddhahood has been spoken of as being radiant by nature, [However] as being covered with the net of the multitude of clouds, In the form of [obstructions on account of] defilements And knowable things which are of accidental nature, Just as the sun and the sky [are often interrupted by clouds Though they are radiant and immaculate, respectively]; This Buddhahood is now eternal, everlasting and constant, Being endowed with all the pure properties of the Buddha, And is attained when the elements [of existence] take resort To the Non-discriminative and Analytical Wisdom. || 3 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861982bi' class='paragraph'>
+							asya ślokasy_arthaḥ samāsena caturbhiḥ ślokair veditavyaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862845bi' class='paragraph'>
+							此三行偈以四行偈略釋應知。偈言&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863708bi' class='paragraph'>
+							tshigs su bcad pa ’di’i don ni mdor bsdu na tshigs su bcad pa bźis rig par bya ste |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864571bi' class='paragraph'>
+							The meaning of this śloka is to be known in brief by the [following] verses.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861983bi' class='verse'>
+							buddhatvam avinirbhāgaśukladharmaprabhāvitam |<br />ādityākāśavaj jñānaprahāṇadvayalakṣaṇam || 4 ||&nbsp;</span><span id='7861984bi' class='verse'>
+						 gaṅgātīrarajo ’tītair buddhadharmaiḥ prabhāsvaraiḥ |<br />sarvair akṛtakair yuktam avinirbhāgavṛttibhiḥ || 5 ||&nbsp;</span><span id='7861985bi' class='verse'>
+						 svabhāvāpariniṣpattivyāpitvāgantukatvataḥ |<br />kleśajñeyāvṛtis tasmān meghavat samudāhṛtā || 6 ||&nbsp;</span><span id='7861986bi' class='verse'>
+						 dvayāvaraṇaviśleṣahetur jñānadvayaṃ punaḥ |<br />nirvikalpaṃ ca tatpṛṣṭhalabdhaṃ tajñānam iṣyate || 7 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862846bi' class='verse'>
+							佛身不捨離 清淨真妙法 如虛空日月 智離染不二&nbsp;</span><span id='7862847bi' class='verse'>
+						 過恆沙佛法 明淨諸功德 非作法相應 不離彼實體&nbsp;</span><span id='7862848bi' class='verse'>
+						 煩惱及智障 彼法實無體 常為客塵染 是故說雲喻&nbsp;</span><span id='7862849bi' class='verse'>
+						 遠離彼二因 向二無分別 無分別真智 及依彼所得&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863709bi' class='verse'>
+							saṅs rgyas ñid ni dbyer med pa || dag pa’i chos kyis rab dbye ba || ñi mkha’ bźin du ye śes daṅ || spaṅs pa gñis kyi mtshan ñid do ||&nbsp;</span><span id='7863710bi' class='verse'>
+						 ’od gsal byas min dbyer med par || gzugs can gaṅ gā’i kluṅ gi ni || rdul las ’das pa’i saṅs rgyas kyi || chos rnams kun daṅ ldan pa ñid ||&nbsp;</span><span id='7863711bi' class='verse'>
+						 raṅ bźin gyis ni ma grub daṅ || khyab daṅ glo bur ba ñid kyis || ñon moṅs śes bya’i sgrib pa de || sprin daṅ ’dra bar brjod pa yin ||&nbsp;</span><span id='7863712bi' class='verse'>
+						 sgrib pa gñis daṅ bral ba yi || rgyu ni ye śes gñis yin te || mi rtog pa daṅ de yi ni || rjes thob de ni ye śes ’dod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864572bi' class='verse'>
+							Buddhahood, which is represented by The indivisible virtuous properties, Has a resemblance to the sun and the sky In both its characters, knowledge and removal. || 4 ||&nbsp;</span><span id='7864573bi' class='verse'>
+						 It is endowed with all the properties of the Buddha, Which are beyond the sands of the Gaṅgā in number, And are radiant and of uncreated nature, And whose manifestations are indivisible [from itself]. || 5 ||&nbsp;</span><span id='7864574bi' class='verse'>
+						 Because of their being unreal by nature, Because of their pervadingness and occasionality, The obstructions of defilements and of ignorance Are illustrated as being like clouds. || 6 ||&nbsp;</span><span id='7864575bi' class='verse'>
+						 The cause of diśolving these two obstructions is Wisdom, Which is again considered as of two kinds, One is the Non-discriminative [Wisdom] And the other is the knowledge, obtained afterwards. || 7 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861987bi' class='paragraph'>
+							yad uktam āśrayaparivṛtteḥ svabhāvo viśuddhir iti tatra viśuddhiḥ samāsato dvividhā | prakṛtiviśuddhir vaimalyaviśuddhiś ca |&nbsp;</span><span id='7861988bi' class='paragraph'>
+						 tatra prakṛtiviśuddhir yā vimuktir na visaṃyogaḥ prabhāsvarāyāś cittaprakṛter āgantukamalāvisaṃyogāt | vaimalyaviśuddhir vimuktir visaṃyogaś ca vāryādīnām iva rajojalādibhyaḥ prabhāsvarāyāś cittaprakṛter anavaśeṣam ā gantukamalebhyo visaṃyogāt |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862850bi' class='paragraph'>
+							此偈明何義。向說轉身實體清淨。又清淨者 略有二種。何等為二。一者自性清淨。二者離垢清淨。&nbsp;</span><span id='7862851bi' class='paragraph'>
+						 自性清淨者。謂性解脫無所捨離。以彼自性清淨心體不捨一切客塵煩惱。以彼本來不相應故。離垢清淨者。謂得解脫。又彼解脫不離一切法。如水不離諸塵垢等而言清淨。以自性清淨心遠離客塵諸煩惱垢更無餘故。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863713bi' class='paragraph'>
+							rnam par dag pa ni gnas yoṅs su gyur ba’i ṅo bo ñid yin no || źes brjod pa gaṅ yin pa de la rnam par dag pa ni mdor bsdu na rnam pa gñis te | raṅ bźin gyis rnam par dag pa daṅ | dri ma med pa’i rnam par dag pa’o ||&nbsp;</span><span id='7863714bi' class='paragraph'>
+						 de la raṅ bźin gyis rnam par dag pa ni | gaṅ źig rnam par grol ba daṅ bral ba ni ma yin pa ste | sems kyi raṅ bźin ’od gsal ba glo bur gyi dri ma daṅ ma bral ba’i phyir ro || dri ma med pa’i rnam par dag pa ni || rdul la sogs pa la chu la sogs pa bźin du rnam par grol pa daṅ bral ba ste | sems kyi raṅ bźin ’od gsal ba la glo bur gyi dri ma mtha’ dag daṅ bral ba’i phyir ro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864576bi' class='paragraph'>
+							(III. PHALA) It is said that the ‘own nature’ of the Perfect Manifestation of the Basis is the ‘perfect purity ‘. This purity is here, in short, of two kinds. Namely, I) the ‘innate purity’; and 2) ‘the purity, as the result of purification’.&nbsp;</span><span id='7864577bi' class='paragraph'>
+						 Of them, 1) ‘the innate purity’ represents that which is Essentially free [from all stains] but actually aśociated with them, [i.e. Reality mingled with pollutions]. Indeed, the Innate Mind, though being radiant, is not [always] separated from the accidental pollutions. 2) ‘The purity, as a result of purification’ represents [that which is] Essentially free and actually, too, liberated from [all pollutions]. Because, just as water and the like become purified from dirt, impurities, etc., the radiant Innate Mind is completely liberated from the accidental pollutions.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861989bi' class='verse'>
+							tatra vaimalyaviśuddhau phalārtham ārabhya dvau ślokau |<br />hrada iva vimalāmbuḥ phullapadmakramāḍhyaḥ sakala iva śaśāṅko rāhuvaktrād vimuktaḥ |<br />ravir iva jaladādikleśanirmuktaraśmir vimalaguṇayutatvād bhāti muktaṃ tad eva || 8 ||&nbsp;</span><span id='7861990bi' class='verse'>
+						 munivṛṣamadhusārahemaratna pravaranidhānamahāphaladrumābham |<br />sugatavimalaratnavigrahāgrakṣitipatikāñcanabimbavajjinatvam || 9 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862852bi' class='verse'>
+							又依彼果離垢清淨故。說四偈 如清淨池水 無有諸塵濁 種種雜花樹 周匝常圍遶 如月離羅…… 日無雲翳等 無垢功德具 顯現即彼體&nbsp;</span><span id='7862853bi' class='verse'>
+						 蜂王美味蜜 堅實淨真金 寶藏大果樹 無垢真金像&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863715bi' class='verse'>
+							de la dri ma med pa’i rnam par dag pa’i ’bras bu’i don las brtsams te tshigs su bcad pa | dri med chu ldan rim rgyas padmas khebs pa’i mtsho bźin daṅ || sgra gcan kha nas thar ba’i zla ba ña ba lta bu daṅ || sprin tshogs ñon moṅs dag las grol ba’i ñi ma lta bur ni || dri med yon tan ldan phyir ’od zer snaṅ ldan de ñid do ||&nbsp;</span><span id='7863716bi' class='verse'>
+						 thub ba’i khyu mchog sbraṅ rtsi sñiṅ po daṅ || rin chen gser daṅ gter daṅ ljon pa bźin || dri med rin chen bde gśegs sku daṅ ni || sa bdag gser gyi gzugs ’dra rgyal ba ñid ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864578bi' class='verse'>
+							Now we have two ślokas about ‘the Purity, as a result of purification’ with reference to the subject of ‘result’. (Kārikās 2-3) Like a pond, filled with pure water, Becomes abundant with flowering lotus gradually, Like the full moon delivered from the jaws of Rāhu, Like the sun, whose rays have been released From the covering of clouds and others, This [Buddhahood], being endowed with pure properties, Manifest itself as being liberated. || 8 ||&nbsp;</span><span id='7864579bi' class='verse'>
+						 This Buddhahood is [also] like the Highest of Sages, Like honey, like the kernel [of corns], like gold, Like a precious store of jewels, like a great fruit-tree, Like an immaculate precious image of the Buddha, Like the Highest Lord of the world, And like a golden statue 24). || 9 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861991bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862854bi' class='paragraph'>
+							轉輪聖王身 妙寶如來像 如是等諸法 即是如來身&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863717bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864580bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7861992bi' class='verse'>
+							asya khalu ślokadvayasyārthaḥ samāsato ’ṣṭābhiḥ ślokair veditavyaḥ |<br />rāgādyāgantukakleśaśuddhir ambuhradādivat |<br />jñānasya nirvikalpasya phalam uktaṃ samāsataḥ || 10 ||&nbsp;</span><span id='7861993bi' class='verse'>
+						 sarvākāravaropetabuddhabhāvanidarśanam |<br />phalaṃ tatpṛṣṭhalabdhasya jñānasya paridīpitam || 11 ||&nbsp;</span><span id='7861994bi' class='verse'>
+						 svacchāmbuhradavad rāgarajaḥkāluṣyahānitaḥ |<br />vineyāmburuhadhyānavāryabhiṣyandanāc ca tat || 12 ||&nbsp;</span><span id='7861995bi' class='verse'>
+						 dveṣarāhupramuktatvān mahāmaitrīkṛpāṃśubhiḥ |<br />jagatspharaṇataḥ pūrṇavimalendūpamaṃ ca tat || 13 ||&nbsp;</span><span id='7861996bi' class='verse'>
+						 mohābhrajālanirmokṣāj jagati jñānaraśmibhiḥ |<br />tamovidhamanāt tac ca buddhatvam amalārkavat || 14 ||&nbsp;</span><span id='7861997bi' class='verse'>
+						 atulyatulyadharmatvāt saddharmarasadānataḥ |<br />phalguvyapagamāt tac ca sugatakṣaudrasāravat || 15 ||&nbsp;</span><span id='7861998bi' class='verse'>
+						 pavitratvād guṇadravyadāridryavinivartanāt |<br />vimuktiphaladānāc ca suvarṇanidhivṛkṣavat || 16 ||&nbsp;</span><span id='7861999bi' class='verse'>
+						 dharmaratnātmabhāvatvād dvipadāgrādhipatyataḥ |<br />rūparatnākṛtitvāc ca tadratnanṛpabimbavat || 17 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862855bi' class='verse'>
+							此四行偈以八行偈略釋應知。偈言 貪等客煩惱 猶如濁水塵 無分別上智 果法如池水&nbsp;</span><span id='7862856bi' class='verse'>
+						 示現佛法身 一切諸功德 依彼證智果 是故如是說&nbsp;</span><span id='7862857bi' class='verse'>
+						 貪如濁水塵 淨法雜垢染 可化諸眾生 如繞池藕花&nbsp;</span><span id='7862858bi' class='verse'>
+						 禪定習氣潤 遠離瞋羅…… 以大慈悲水 遍益諸眾生&nbsp;</span><span id='7862859bi' class='verse'>
+						 如十五日月 遠離雲羅網 光明照眾生 能除諸幽闇 佛無垢日月 離癡雲羅網 智光照眾生 除滅諸黑闇&nbsp;</span><span id='7862860bi' class='verse'>
+						 得無等等法 能與妙法味 諸佛如蜜堅 遠離蜂……障&nbsp;</span><span id='7862861bi' class='verse'>
+						 真實妙功德 除斷諸貧窮 能與解脫勢 故說金樹喻&nbsp;</span><span id='7862862bi' class='verse'>
+						 法寶真實身 增上兩足尊 勝色畢竟成 故說後三喻&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863718bi' class='verse'>
+							tshigs su bcad pa gñis po ’di’i don ni mdor bsdu na | tshigs su bcad pa brgyad kyis rig par bya ste || chu mtsho sogs bźin ’dod chags sogs || glo bur ñon moṅs dag pa ni || mdor na mi rtog ye śes kyi || ’bras bu yin par rab tu brjod ||&nbsp;</span><span id='7863719bi' class='verse'>
+						 rnam pa kun gyi mchog ldan pa’i || saṅs rgyas sku ni ṅes thob pa || de ni rjes las thob pa yi || ye śes ’bras bu yin par bstan ||&nbsp;</span><span id='7863720bi' class='verse'>
+						 ’dod chags rdul ni spaṅ phyir daṅ || gdul bar bya ba’i padma la || bsam gtan chu ni ’bab phyir de || chu daṅ rdziṅ daṅ mtshuṅs pa yin ||&nbsp;</span><span id='7863721bi' class='verse'>
+						 źe sdaṅ sgra gcan las grol bas || sñiṅ rje byams chen ’od zer gyis || ’gro ba khyab pa’i phyir na de || dri med zla ba ña ba bźin ||&nbsp;</span><span id='7863722bi' class='verse'>
+						 gti mug sprin las rnam grol bas || ’gro ba ye śes ’od zer gyis || mun pa sel phyir saṅs rgyas ñid || de ni dri med ñi ma bźin ||&nbsp;</span><span id='7863723bi' class='verse'>
+						 mi mñam mñam pa’i chos ñid phyir || dam chos ro ni sbyin mdzad daṅ || śun pa daṅ ni bral phyir te || bde gśegs sbraṅ rtsi’i sñiṅ po bźin ||&nbsp;</span><span id='7863724bi' class='verse'>
+						 dag phyir yon tan rdzas kyis ni || dbul ba sel bar byed phyir daṅ || rnam grol ’bras bu smin byed phyir || gser daṅ gter daṅ ljon pa bźin ||&nbsp;</span><span id='7863725bi' class='verse'>
+						 rin chen chos kyi sku phyir daṅ || rkaṅ gñis bdag po mchog phyir daṅ || rin chen gzugs kyi rnam pa’i phyir || de ni rin chen rgyal gser bźin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864581bi' class='verse'>
+							The meaning of these two ślokas, in short, is to be known by the following 8 verses: The result of the Non-discriminative Wisdom In short, is said to be akin to a pond and others, Being pure [as the result of the removal] of Desire and other accidental defilements. || 10 ||&nbsp;</span><span id='7864582bi' class='verse'>
+						 [On the other hand], the result of Wisdom, Attained on the basis of the former, is explained As the actual sight of the Buddha’s state Pośeśed of all kinds of excellency. || 11 ||&nbsp;</span><span id='7864583bi' class='verse'>
+						 It is like a pond filled with shining water Because of its rejecting the dirtiness of the dust of Desire, And because of its sprinkling the water of meditation On the disciples who are like lotus flowers. || 12 ||&nbsp;</span><span id='7864584bi' class='verse'>
+						 It has a resemblance to the immaculate full moon, Since it has been released from the Rāhu of Hatred And since it pervades all the world With the rays of Great Love and Compassion. || 13 ||&nbsp;</span><span id='7864585bi' class='verse'>
+						 And this Buddhahood is similar to the immaculate sun, Because of its being free from the clouds of Ignorance, And because of its removing the darkness of the world With the rays of its divine Wisdom. || 14 ||&nbsp;</span><span id='7864586bi' class='verse'>
+						 Being possessed of the unequalled properties, Bringing forth the Essence of the Highest Doctrine, And being free from the outer covering [of Defilements], It is like the Buddha, like honey and the kernel [of grains]. || 15 ||&nbsp;</span><span id='7864587bi' class='verse'>
+						 Being pure, being freed from the poverty By the richness of its properties, And being the giver of the fruit of Liberation, It is like gold, like a treasure, and a tree, [respectively]. || 16 ||&nbsp;</span><span id='7864588bi' class='verse'>
+						 By its body’s being made of the jewel of the Doctrine, Its being the Highest Lord of the human beings, And its having the appearance of the most precious form, It is like a precious [image], a king and a golden statue. || 17 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7862000bi' class='paragraph'>
+							yat tu dvividhaṃ lokottaram avikalpaṃ tatpṛṣṭhalabdhaṃ ca jñānam āśrayaparivṛtter hetur visaṃyogaphalasaṃjñitāyāḥ | tat karma svaparārthasaṃpādanam ity uktam |&nbsp;</span><span id='7862001bi' class='paragraph'>
+						 tatra katamā svaparārthasaṃpat | yā savāsanakleśajñeyāvaraṇavimokṣād anāvaraṇadharmakāyaprāptir iyam ucyate svārthasampattiḥ | yā tadūrdhvam ā lokād anābhogataḥ kāyadvayena saṃdarśanadeśanāvibhūtva dvayapravṛttir iyam ucyate parārthasaṃpattir iti |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862863bi' class='paragraph'>
+							又向說以二種智依自利利他業。何者為二。一者出世間無分別智。二者依出世間無分別智。轉身得身行因遠離煩惱。得證智果故。&nbsp;</span><span id='7862864bi' class='paragraph'>
+						 又何者是成就自利。謂得解脫遠離煩惱障 遠離智障。得無障礙清淨法身。是名成就自 身利益。又何者是成就他利益。既得成就自身利已。無始世來自然依彼二種佛身。示現世間自在力行。是名成就他身利益。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863726bi' class='paragraph'>
+							gnas yoṅs su gyur ba ’jig rten las ’das pa rnam par mi rtog pa daṅ | de’i rjes la thob pa ye śes kyi rgyu can bral ba’i ’bras bu’i miṅ can gnas yoṅs su gyur ba’i rgyu yin la | de’i las ni raṅ daṅ gźan gyi don phun sum tshogs pa gaṅ yin par brjod do ||&nbsp;</span><span id='7863727bi' class='paragraph'>
+						 de la raṅ daṅ gźan gyi don phun sum tshogs pa gna źe na | gaṅ źig bag chags daṅ bcas pa’i ñon moṅs pa daṅ śes bya’i sgrib pa las thar pa’i phyir daṅ | sgrib pa med pa’i chos kyi sku thob pa ’di ni raṅ || gi don phun sum tshogs par brjod la | gaṅ źig de’i steṅ du ’jig rten ji srid par lhun gyis grub pa sku gñis kyis kun du ston pa daṅ | bstan pa la dbaṅ ’byor ba gñis kyis ’jug pa ’di ni gźan gyi don phun sum mtshogs pa&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864589bi' class='paragraph'>
+							(IV. KARMAN) It has been said that the two kinds of Wisdom, viz. the supermundane Non discriminative Wisdom and the mundane knowledge, obtained afterwards on the basis of the former, are the cause of the Perfect Manifestation of the Basis, which is called ‘the result of the liberation’ and the ‘function’ of the Wisdom is the fulfillment of one’s own aim and of that of others.&nbsp;</span><span id='7864590bi' class='paragraph'>
+						 Then, what is the ‘fulfillment of one’s own aim and of that of others’? That which represents the attainment of the undefiled Absolute Body, as being freed from the obstructions due to Defilements and knowable things along with their potential forces is called the ‘fulfillment of one’s own aim ‘. And that which comes after the attainment of the fulfillment of one’s own aim, and represents the manifestation, by means of twofold power, viz. I) appearance in the forms of two bodies; and 2) the teaching by means of them, [both of] which continue as long as the world exists, without any effort, it is called the ‘fulfilment of the aim of others’.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7862002bi' class='verse'>
+							tasyāṃ svaparārthasaṃpattau karmārtham ārabhya trayaḥ ślokāḥ |<br />anāsravaṃ vyāpya vināśadharmi ca dhruvaṃ śivaṃ śāśvatam acyutaṃ padam |<br />tathāgatatvaṃ gaganopamaṃ satām ṣaḍindriyārthānubhaveṣu kāraṇam || 18 ||&nbsp;</span><span id='7862003bi' class='verse'>
+						 vibhūtirūpārthavidarśane sadā nimittabhūtaṃ sukathāśuciśrave |<br />tathāgatānāṃ śuciśīlajighraṇe mahāryasaddharmarasāgravindane || 19 ||&nbsp;</span><span id='7862004bi' class='verse'>
+						 samādhisaṃsparśasukhānubhūtiṣu svabhāvagāmbhīryanayāvabodhane |<br />susūkṣmacintāparamārthagahvaraṃ tathāgatavyoma nimittavarjitam || 20 ||&nbsp;</span><span id='7862005bi' class='verse'>
+						 asya khalu ślokatrayasyārthaḥ samāsato ’ṣṭābhiḥ ślokair veditavyaḥ |<br />karma jñānadvayasyaitad veditavyaṃ samāsataḥ |<br />pūraṇaṃ muktikāyasya dharmakāyasya śodhanam || 21 ||&nbsp;</span><span id='7862006bi' class='verse'>
+						 vimuktidharmakāyau ca veditavyau dvirekadhā |<br />anāsravatvād vyāpitvād asaṃskṛtapadatvataḥ || 22 ||&nbsp;</span><span id='7862007bi' class='verse'>
+						 anāsravatvaṃ kleśānāṃ savāsananirodhataḥ |<br />asaṅgāpratighātatvāj jñānasya vyāpitā matā || 23 ||&nbsp;</span><span id='7862008bi' class='verse'>
+						 asaṃskṛtatvam atyantam avināśasvabhāvataḥ |<br />avināśitvam uddeśas tannirdeśo dhruvādhibhiḥ || 24 ||&nbsp;</span><span id='7862009bi' class='verse'>
+						 nāśaś caturvidho jñeyo dhruvatvādiviparyayāt |<br />pūtir vikṛtir ucchittir acintyanamanacyutiḥ || 25 ||&nbsp;</span><span id='7862010bi' class='verse'>
+						 tadabhāvād dhruvaṃ jñeyaṃ śivaṃ śāśvatam acyutam |<br />padaṃ tad amalajñānaṃ śukladharmāspadatvataḥ || 26 ||&nbsp;</span><span id='7862011bi' class='verse'>
+						 yathānimittam ākāśaṃ nimittaṃ rūpadarśane |<br />śabdagandharasaspṛśyadharmāṇāṃ ca śravādiṣu || 27 ||&nbsp;</span><span id='7862012bi' class='verse'>
+						 indriyārtheṣu dhīrāṇām anāsravaguṇodaye |<br />hetuḥ kāyadvayaṃ tadvad anāvaraṇayogataḥ || 28 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862865bi' class='verse'>
+							又依自 利利他。成就業義故。說四偈 無漏及遍至 不滅法與恆 清涼不變異 不退寂靜處 諸佛如來身 如虛空無相 為諸勝智者 作六根境界&nbsp;</span><span id='7862866bi' class='verse'>
+						 示現微妙色 出於妙音聲 令嗅佛戒香 與佛妙法味&nbsp;</span><span id='7862867bi' class='verse'>
+						 使覺三昧觸 令知深妙法 細思惟稠林 佛離虛空相&nbsp;</span><span id='7862868bi' class='verse'>
+						 此四行偈以八行偈略釋應知。偈言 略說二種法 業智應當知 滿足解脫身 清淨真法身&nbsp;</span><span id='7862869bi' class='verse'>
+						 解脫身法身 二及一應知 謂無漏遍至 及究竟無為&nbsp;</span><span id='7862870bi' class='verse'>
+						 煩惱盡無漏 及習氣滅故 無閡及無障 智遍至應知&nbsp;</span><span id='7862871bi' class='verse'>
+						 無為以不滅 實體不失故 不失名為本 恆等句解釋&nbsp;</span><span id='7862872bi' class='verse'>
+						 對於恆等句 有四失應知 死無常及轉 不可思議退&nbsp;</span><span id='7862873bi' class='verse'>
+						 以無死故恆 以常故清涼 不轉故不變 寂靜故不退 彼究竟足跡 淨智白法體&nbsp;</span><span id='7862874bi' class='verse'>
+						 具足色聲等 示現於諸根 如虛空無相 而現色等相 法身亦如是 具六根境界&nbsp;</span><span id='7862875bi' class='verse'>
+						 &nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863728bi' class='verse'>
+							de la las kyi don las brtsams te tshigs su bcad pa gsum ste | zag pa med khyab ’jig med chos can te || brtan źi rtag pa ’pho ba med pa’i gnas || de bźin gśegs pa mkha’ bźin dag pa yi || dbaṅ po drug don ñams su myoṅ ba’i rgyu ||&nbsp;</span><span id='7863729bi' class='verse'>
+						 dbaṅ ’byor gzugs don lta daṅ gtam bzaṅ ni || gtsaṅ ma ñan daṅ bde gśegs tshul khrims kyi || dri gtsaṅ snom daṅ ’phags chen dam chos ro || myaṅ daṅ tiṅ ’dzin reg bde ñams myoṅ daṅ ||&nbsp;</span><span id='7863730bi' class='verse'>
+						 raṅ gi ṅo bo ñid kyis zab pa’i tshul | rtogs pa’i rgyur gyur źib mor bsams pa na | don dam bde mdzad de bźin gśegs pa ni || nam mkha’ bźin du rgyu mtshan rnams daṅ bral ||&nbsp;</span><span id='7863731bi' class='verse'>
+						 tshigs su bcad pa gsum po ’di’i don ni mdor bsdu na | tshigs su bcad pa brgyad kyis rig bar bya ste | mdor na ye śes gñis po yi || las su ’di ni śes bya ste || ’gro ba’i sku ni rdzogs pa daṅ || chos gyi sku ni sbyoṅ ba’o ||&nbsp;</span><span id='7863732bi' class='verse'>
+						 rnam grol chos kyi sku dag ni || rnam gñis rnam gcig śes bya ste || zag pa med phyir khyab pa’i phyir || ’dus ma byas pa’i gnas ñid phyir ||&nbsp;</span><span id='7863733bi' class='verse'>
+						 ñon moṅs rnams ni bag chags daṅ || bcas pa ’gags phyir zag med de || chags med thogs pa med pa’i phyir || ye śes khyab pa ñid du ’dod ||&nbsp;</span><span id='7863734bi' class='verse'>
+						 gtan du ’jig pa med pa yi || raṅ bźin yin phyir ’dus ma byas || ’jig med chos ni brtan pa ste || bstan sogs rnams kyis ’di bśad do ||&nbsp;</span><span id='7863735bi' class='verse'>
+						 ’jig pa rnam bźir śes bya ste || bstan sogs dag las bzlog phyir ro || myags daṅ rnam ’gyur chad pa daṅ || bsam mi khyab bar ’pho ba ste ||&nbsp;</span><span id='7863736bi' class='verse'>
+						 de med phyir ni brtan źi daṅ || rtag daṅ ’pho med śes par bya || dri med śes de dkar po yi || chos kyi rten yin phyir na gnas ||&nbsp;</span><span id='7863737bi' class='verse'>
+						 ji ltar rgyu min nam mkha’ ni || gzugs mthoṅ ba daṅ sgra daṅ dri || ro daṅ reg daṅ chos rnams ni || thos la sogs pa’i rgyu yin ltar ||&nbsp;</span><span id='7863738bi' class='verse'>
+						 de bźin sku gñis sgrib med pa’i || sbyor bas bstan pa’i dbaṅ don la || zag med pa yi yon tan dag | skye ba yin ni rgyu yin no ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864591bi' class='verse'>
+							About this fulfillment of one’s own aim and of that of others, with reference to the subject ‘function’ we have three ślokas. (Kārikās 4-6) Buddhahood, being the foundation, Immaculate and all-pervading, Of unperishable nature, and everlasting, Quiescent, constant and unchangeable, Is, like space, the cause for the Intelligent To experience the objects through sense-organs. || 18 ||&nbsp;</span><span id='7864592bi' class='verse'>
+						 It gives always the cause [for enjoyment] In showing the miraculous apparitional forms, In the pure audition of its perfect preaching, In the pure scent of the Buddhas’ morality, In tasting of the taste of the great, sublime and highest Doctrine, || 19 ||&nbsp;</span><span id='7864593bi' class='verse'>
+						 In the enjoyment of the pleasurable touch of meditation, And in the cognition of doctrine, profound by its nature; [But], being the Highest Truth, the thicket of quite subtle thinking, The Tathāgata himself, like space, is of no visible mark. || 20 ||&nbsp;</span><span id='7864594bi' class='verse'>
+						 The meaning of these three ślokas, in brief, is to be known by the following 8 verses. The function of the twofold Wisdom In short, is to be known as follows: [One is] the fulfillment of the Body of [innate] liberation, [The other is] the purification of the Absolute Body. || 21 ||&nbsp;</span><span id='7864595bi' class='verse'>
+						 The Body of innate liberation and the Absolute Body, [Although] being two [in their functions], are to be known as one, Because they are free from passions and all-pervading, And are the immaculate substratum. || 22 ||&nbsp;</span><span id='7864596bi' class='verse'>
+						 It is ‘free from passions’ Since the Defilements are resisted along with impressions; Wisdom is considered as ‘pervading’ Since it has neither attachment nor hindrance. || 23 ||&nbsp;</span><span id='7864597bi' class='verse'>
+						 The ‘absolute immutability’ is caused By its nature of imperishability, [Here] ‘imperishability’ is a general statement, Which is explained by the words, ‘everlasting’ etc. || 24 ||&nbsp;</span><span id='7864598bi' class='verse'>
+						 The ‘Evanescence’ is to be known as of four kinds, Being the counterparts of ‘everlasting’ and the rest, [They are namely]: ‘putridity’, ‘disease’, ‘Annihilation’ and ‘death in an inconceivable way’. || 25 ||&nbsp;</span><span id='7864599bi' class='verse'>
+						 Because of their absence, it is known to be ‘Everlasting’, ‘quiescent’, ‘constant’ and ‘unchangeable’ And this immaculate Wisdom is the ‘substratum’ Since it is the support of [all] the pure elements. || 26 ||&nbsp;</span><span id='7864600bi' class='verse'>
+						 Just as space, being itself of no cause, Is the cause of perceiving, hearing and so on Of form, of sounds, of tastes, of smells, Of things touchable and of substances respectively, || 27 ||&nbsp;</span><span id='7864601bi' class='verse'>
+						 In the same way, the twofold [apparitional] Body, On account of its connection with the undefiled character, Is the cause for wise men to give rise to Immaculate virtues in the objects of sense-organs. || 28 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7862013bi' class='paragraph'>
+							yad uktam ākāśalakṣaṇo buddha iti tatpāramārthikam āveṇikaṃ tathāgatānāṃ buddha lakṣaṇam abhisaṃdhāyoktam | evaṃ hy āha |sa ceddvātriṃśan mahāpuruṣalakṣaṇais tathāgato draṣṭavyo ’bhaviṣyat tad rājāpi cakravartī tathāgato ’bhaviṣyad iti |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862876bi' class='paragraph'>
+							此偈明何義。經中說言。如虛空相諸佛亦爾者。此依第一義。諸佛如來清淨法身自體相 不共法故。作如是說。以是義故。金剛般若波 羅蜜經言。須菩提。於意云何。可以三十二大 人相成就得見如來不。須菩提言。如我解佛 所說義者。不以相成就得見如來。佛言。如是如是。須菩提。不以相成就得見如來。須菩提。若以相成就觀如來者。轉輪聖王應是如來。是故非以相成就得見如來故。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863739bi' class='paragraph'>
+							ji skad du | saṅs rgyas nam mkha’i mtshan ñid do || źes bya ba bśad pa de ni de bźin gśegs pa rnams kyi ma ’dres pa’i don dam pa’i mtshan ñid la dgoṅs nas gsuṅs pa yin te | gaṅ gi phyir gal te skyes bu chen po’i mtshan sum cu rtsa gñis kyis de bźin gśegs pa lta bar gyur na ni | des na ’khor los sgyur ba’i rgyal bo yaṅ de bźin gśegs par ’gyur ro źes gsuṅs so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864602bi' class='paragraph'>
+							(V. YOGA) It is said that the Buddha has the character of space. This refers specially to the absolute and exclusive character of the Buddha. So it is said: “If the Tathāgata could be recognized merely by the 32 marks of a superman, the universal monarch, too, would turn to be a Buddha”.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7862014bi' class='verse'>
+							tatra paramārthalakṣaṇe yogārtham ārabhya ślokaḥ |<br />acintyaṃ nityaṃ ca dhruvam atha śivaṃ śāśvatam atha praśāntaṃ ca vyāpi vyapagatavikalpaṃ gaganavat |<br />asaktaṃ sarvatrāpratighaparuṣasparśavigataṃ na dṛśyaṃ na grāhyaṃ śubham api ca buddhatvam amalam || 29 ||&nbsp;</span><span id='7862015bi' class='verse'>
+						 atha khalv asya ślokasyārthaḥ samāsato ’ṣṭābhiḥ ślokair veditavyaḥ |<br />vimuktidharmakāyābhyāṃ svaparārtho nidarśitaḥ |<br />svaparārthāśraye tasmin yogo ’cintyādibhir guṇaiḥ || 30 ||&nbsp;</span><span id='7862016bi' class='verse'>
+						 acintyam anugantavyaṃ trijñānāviṣayatvataḥ |<br />sarvajñajñānaviṣayaṃ buddhatvaṃ jñānadehibhiḥ || 31 ||&nbsp;</span><span id='7862017bi' class='verse'>
+						 śrutasyāviṣayaḥ saukṣmyāc cintāyāḥ paramārthataḥ |<br />laukyādibhāvanāyāś ca dharmatāgahvaratvataḥ || 32 ||&nbsp;</span><span id='7862018bi' class='verse'>
+						 dṛṣṭapūrvaṃ na tad yasmād bālair jātyandhakāyavat |<br />āryaiś ca sūtikāmadhyasthitabālārkabimbavat || 33 ||&nbsp;</span><span id='7862019bi' class='verse'>
+						 utpādavigamān nityaṃ nirodhavigamād dhruvam |<br />śivam etaddvayābhāvāc chāśvataṃ dharmatāsthiteḥ || 34 ||&nbsp;</span><span id='7862020bi' class='verse'>
+						 śāntaṃ nirodhasatyatvād vyāpi sarvāvabodhataḥ |<br />akalpam apratiṣṭhānād asaktaṃ kleśahānitaḥ || 35 ||&nbsp;</span><span id='7862021bi' class='verse'>
+						 sarvatrāpratighaṃ sarvajñeyāvaraṇaśuddhitaḥ |<br />paruṣasparśanirmuktaṃ mṛdukarmaṇyabhāvataḥ || 36 ||&nbsp;</span><span id='7862022bi' class='verse'>
+						 adṛśyaṃ tadarūpitvād agrāhyam animittataḥ |<br />śubhaṃ prakṛtiśuddhatvād amalaṃ malahānitaḥ || 37 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862877bi' class='verse'>
+							此明何義。以依如來第一義諦清淨法身明如是義。又依 相應義故。說二偈 如空不思議 常恆及清涼 不變與寂靜 遍離諸分別 一切處不著 離閡麤澀觸 亦不可見取 佛淨心無垢&nbsp;</span><span id='7862878bi' class='verse'>
+						 此二行偈以八行偈略釋應知。偈言 解脫 身法身示 自利利他 依自利利他 彼處相應義&nbsp;</span><span id='7862879bi' class='verse'>
+						 一切諸功德 不思議應知 以非三慧境 一切種智知&nbsp;</span><span id='7862880bi' class='verse'>
+						 諸眾生佛體 細故非聞境 第一非思思 以出世深密&nbsp;</span><span id='7862881bi' class='verse'>
+						 世修慧不知 諸愚癡凡夫 本來未曾見 如盲不矚色 二乘如嬰兒 不見日月輪&nbsp;</span><span id='7862882bi' class='verse'>
+						 以不生故常 以不滅故恆 離二故清涼 法性住不變&nbsp;</span><span id='7862883bi' class='verse'>
+						 證滅故寂靜 一切覺故遍 不住不分別 離煩惱不著&nbsp;</span><span id='7862884bi' class='verse'>
+						 無智障離閡 柔軟離麤澀&nbsp;</span><span id='7862885bi' class='verse'>
+						 無色不可見 離相不可取 以自性故淨 離染故無垢&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863740bi' class='verse'>
+							de la don dam pa’i mtshan ñid kyi ldan pa’i don las brtsams te tshigs su bcad pa | bsam med rtag brtan źi bag yuṅ druṅ ñid || rab tu źi khyab rtog bral nam mkha’ bźin || chags med kun tu thogs med rtsub reg spaṅs || blta gzuṅ med dge saṅs rgyas dri ma med ||&nbsp;</span><span id='7863741bi' class='verse'>
+						 tshigs su bcad pa ’di’i don ni mdor bsdu na tshigs su bcad pa brgyad kyis rig par bya ste | rnam grol chos kyi sku dag gis || raṅ daṅ gźan gyi don bstan te || raṅ bźan don rten de la ni || bsam mi khyab sogs yon tan ldan ||&nbsp;</span><span id='7863742bi' class='verse'>
+						 thams cad mkhyen pa’i ye śes yul || saṅs rgyas śes gsum yul min phyir || ye śes lus can rnams kyis ni || bsam mi khyab par rtogs par bya ||&nbsp;</span><span id='7863743bi' class='verse'>
+						 phra phyir thos pa’i yol min te || don dam yin phyir bsam bya’i min || chos ñid zab phyir ’jig rten pa’i || sgom pa la sogs yul ma yin ||&nbsp;</span><span id='7863744bi' class='verse'>
+						 gaṅ phyir gzugs la dmus loṅ bźin || byis pas de sṅon mthoṅ ma myoṅ || btsas pa’i khyim nas bu chuṅ gis || ñi ma’i gzugs bźin ’phags pas kyaṅ ||&nbsp;</span><span id='7863745bi' class='verse'>
+						 skye daṅ bral źiṅ rtag pa ste || ’gag pa med phyir brtan pa yin || gñis med phyir na źi ba ste || gyuṅ daṅ chos ñid gnas phyir ro ||&nbsp;</span><span id='7863746bi' class='verse'>
+						 rab źi ’gog pa’i bden pa’i phyir || thams cad rtogs phyir khyab pa ñid || gnas pa med phyir rtog med de || ñon moṅs spaṅs phyir chags pa med ||&nbsp;</span><span id='7863747bi' class='verse'>
+						 śes bya’i sgrib kun dag bya’i phyir || thams cad du ni thogs pa med || gñis med las su ruṅ ba’i phyir || rtsub ba’i reg daṅ bral ba’i phyir ||&nbsp;</span><span id='7863748bi' class='verse'>
+						 de gzugs med ciṅ bltar med de || mtshan ma || med phyir gzuṅ du med || deg pa’i raṅ bźin dag pa’i phyir || dri med dri ma spaṅs phyir ro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864603bi' class='verse'>
+							Now, there is one śloka about the highest character in reference to the subject of ‘union’. (Kārikā 7) Being inconceivable, eternal and ever-lasting, Being quiescent, constant, and perfectly pacified, Being all-pervading and apart from discrimination, The pure and immaculate Buddhahood is like space, It has neither attachment nor hindrance anywhere, And, being devoid of rough sensation, It can be neither perceived nor cognized. || 29 ||&nbsp;</span><span id='7864604bi' class='verse'>
+						 Now, the meaning of this śloka is, in short, to be known by the following 8 verses. The [fulfillment of] one’s own aim and of that of others Are represented by the Bodies of Liberation and of the Absolute; On this foundation of one’s own aim and of that of others There is the ‘union’ of properties, ‘inconceivable’ and others. || 30 ||&nbsp;</span><span id='7864605bi' class='verse'>
+						 Buddhahood is accessible only to the Wisdom of the Omniscient, And is not the object of the [kinds of ordinary] knowledge, Therefore, it is to be known as ‘inconceivable’ [Even] for those people of intellect. || 31 ||&nbsp;</span><span id='7864606bi' class='verse'>
+						 Being of subtle character, it is not the object of study, Being the Highest Truth, it is not the object of thought, And, being the impenetrable Absolute Essence, It is not accessible to the mundane meditation and the like, || 32 ||&nbsp;</span><span id='7864607bi' class='verse'>
+						 Because it has never been seen before by ordinary persons, Like the visible forms for those who are born blind, nor even by the Saints, Like the disk of the sun for infants lying in their mother’s bed. || 33 ||&nbsp;</span><span id='7864608bi' class='verse'>
+						 It is ‘eternal’, as it is devoid of birth; It is ‘everlasting’ since it does not disappear; It is ‘quiescent’ because it is free from dualism, And is ‘constant’ because of endurance of Reality. || 34 ||&nbsp;</span><span id='7864609bi' class='verse'>
+						 It is ‘perfectly pacified’ as being the Truth of Extinction, It is ‘all-pervading’, since it cognizes everything ; It is ‘non-discriminative’ as it has no insistence; And ‘has no attachment’ since it rejects defilements. || 35 ||&nbsp;</span><span id='7864610bi' class='verse'>
+						 Being purified from all the obscurations of Ignorance, It ‘has no hindrance’ in regard to everything [knowable]; Being of soft and light-moving nature, It is ‘devoid of rough sensation’. || 36 ||&nbsp;</span><span id='7864611bi' class='verse'>
+						 Being immaterial, it cannot be perceived, And being of no [visible] mark, it is ‘incognizable’; It is ‘pure’ since it is pure by nature, And is ‘immaculate’ because of its removal of pollutions. || 37 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7862023bi' class='paragraph'>
+							tat punar etad ākāśavad asaṃskṛtaguṇāvinirbhāgavṛttyāpi tathāgatatvam ābhagavater acintyamahopāyakaruṇājñānaparikarmaviśeṣeṇa jagaddhitasukhādhānanimittam amalais tribhiḥ svābhāvikasāṃbhogikanairmāṇikaiḥ kāyair anuparatam anucchinnam anābhogena pravartata iti draṣṭavyam āveṇikadharmayutatvād iti |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862886bi' class='paragraph'>
+							此偈明何義。虛空譬喻者。明諸佛如來無為 諸功德不離佛法身。於所有諸有得不可思 議勝大方便業勝大悲業勝大智業。為與一切眾生樂相無垢清淨三種佛身。所謂實佛受法樂佛及化身佛。常不休息常不斷絕。自然修行。以為利益一切眾生應知。以不共餘 人唯諸佛如來法身相應故。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863749bi' class='paragraph'>
+							de bźin gśegs pa ñid ’di nam mkha’ ltar ’dus ma byas pa’i yon tan daṅ | rnam par dbye ba med par ’jug pa yaṅ srid pa ji srid kyi bar du bsam gyis mi khyab pa thabs chen po daṅ | sñiṅ rje daṅ | śes rab kyis yoṅs su sbyoṅ ba’i khyad par gyis ’gro ba la phan pa daṅ bde ba sgrub pa’i rgyu’i ṅo bo ñid daṅ | rdzogs par loṅs spyod pa daṅ | sprul ba ste | dri ma med pa gsum gyis bar chad med ciṅ rgyun mi ’chad par lhun gyis grub pas ’jug par blta bar bya ste ma ’dres pa’i chos daṅ ldan pa’i phyir ro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864612bi' class='paragraph'>
+							(VI. VÙTTI) Now again it should be known that this Buddhahood, due to its pośession of properties uncommon to others, manifests itself, though by means of a manifestation which is inseparable from its immutable qualities like space, still in the forms of three immaculate bodies, viz. ‘the Body of Absolute Essence’, ‘the Body of Enjoyment’, and ‘the Apparitional Body’ with various inconceivable appliances like the Great skilful means, Great Compassion, and Wisdom, in order to be the support of the welfare and happiness of all living beings, as long as the world exists, without cessation, without interruption, and with no effort.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7862024bi' class='verse'>
+							tatra vṛttyartham ārabhya buddhakāyavibhāge catvāraḥ ślokāḥ |<br />anādimadhyāntam abhinnam advayaṃ tridhā vimuktaṃ vimalāvikalpakam |<br />samāhitā yoginas tatprayatnāḥ paṣyanti yaṃ dharmadhātusvabhāvam || 38 ||&nbsp;</span><span id='7862025bi' class='verse'>
+						 ameyagaṅgāsikatātivṛttair guṇair acintyair asamair upetaḥ |<br />savāsanonmūlitasarvadoṣas tathāgatānām amalaḥ sa dhātuḥ || 39 ||&nbsp;</span><span id='7862026bi' class='verse'>
+						 vicitrasaddharmamayūkhavigrahair jagadvimokṣārthasamāhṛtodyamaḥ |<br />kriyāsu cintāmaṇirājaratnavad vicitrabhāvo na ca tatsvabhāvavān || 40 ||&nbsp;</span><span id='7862027bi' class='verse'>
+						 lokeṣu yac chāntipathāvatāra prapācanāvyākaraṇe nidānam |<br />bimbaṃ tad apy atra sadāvaruddham ākāśadhātāv iva rūpadhātuḥ || 41 ||&nbsp;</span><span id='7862028bi' class='verse'>
+						 eṣāṃ khalu caturṇāṃ ślokānāṃ piṇḍārtho viṃśatiślokair veditavyaḥ |<br />yat tad buddhatvam ity uktaṃ sarvajñatvaṃ svayaṃbhuvām |<br />nirvṛtiḥ paramācintyaprāptiḥ pratyātmaveditā || 42 ||&nbsp;</span><span id='7862029bi' class='verse'>
+						 tatprabhedas tribhiḥ kāyair vṛttiḥ svābhāvikādibhiḥ |<br />gāmbhīryaudāryamāhātmyaguṇadharmaprabhāvitaiḥ || 43 ||&nbsp;</span><span id='7862030bi' class='verse'>
+						 tatra svābhāvikaḥ kāyo buddhānāṃ pañcalakṣaṇaḥ |<br />pañcākāraguṇopeto veditavyaḥ samāsataḥ || 44 ||&nbsp;</span><span id='7862031bi' class='verse'>
+						 asaṃskṛtam asaṃbhinnam antadvayavivarjitam |<br />kleśajñeyasamāpattitrayāvaraṇaniḥsṛtam || 45 ||&nbsp;</span><span id='7862032bi' class='verse'>
+						 vaimalyād avikalpatvād yogināṃ gocaratvataḥ |<br />prabhāsvaraṃ viśuddhaṃ ca dharmadhātoḥ svabhāvataḥ || 46 ||&nbsp;</span><span id='7862033bi' class='verse'>
+						 aprameyair asaṃkhyeyair acintyair asamair guṇaiḥ |<br />viśuddhipāramīprāptair yuktaṃ svābhāvikaṃ vapuḥ || 47 ||&nbsp;</span><span id='7862034bi' class='verse'>
+						 udāratvād agaṇyatvāt tarkasyāgocaratvataḥ |<br />kaivalyād vāsanocchitter aprameyād ayaḥ kramāt || 48 ||&nbsp;</span><span id='7862035bi' class='verse'>
+						 vicitradharmasaṃbhogarūpadharmāvabhāsataḥ |<br />karuṇāśuddhiniṣyandasattvārthāsraṃsanatvataḥ || 49 ||&nbsp;</span><span id='7862036bi' class='verse'>
+						 nirvikalpaṃ nirābhogaṃ yathābhiprāyapūritaḥ |<br />cintāmaṇiprabhāvarddheḥ sāṃbhogasya vyavasthitiḥ || 50 ||&nbsp;</span><span id='7862037bi' class='verse'>
+						 deśane darśane kṛtyāsraṃsane ’nabhisaṃskṛtau |<br />atatsvabhāvākhyāne ca citratoktā ca pañcadhā || 51 ||&nbsp;</span><span id='7862038bi' class='verse'>
+						 raṅgapratyayavaicitryād atadbhāvo yathā maṇeḥ |<br />sattvapratyayavaicitryād atadbhāvas tathā vibhoḥ || 52 ||&nbsp;</span><span id='7862039bi' class='verse'>
+						 mahākaruṇayā kṛtsnaṃ lokam ālokya lokavit |<br />dharmakāyād aviralaṃ nirmāṇaiś citrarūpibhiḥ || 53 ||&nbsp;</span><span id='7862040bi' class='verse'>
+						 jātakāny upapattiṃ ca tuṣiteṣu cyutiṃ tataḥ |<br />garbhāvakramaṇaṃ janma śilpasthānāni kauśalam || 54 ||&nbsp;</span><span id='7862041bi' class='verse'>
+						 antaḥpuraratikrīḍāṃ naiṣkramyaṃ duḥkhacārikām |<br />bodhimaṇḍopasaṃkrāntiṃ mārasainyapramardanam || 55 ||&nbsp;</span><span id='7862042bi' class='verse'>
+						 saṃbodhiṃ dharmacakraṃ ca nirvāṇādhigamakriyām |<br />kṣetreṣv apariśuddheṣu darśayaty ā bhavasthiteḥ || 56 ||&nbsp;</span><span id='7862043bi' class='verse'>
+						 anityaduḥkhanairātmyaśāntiśabdair upāyavit |<br />udvejya tribhavāt sattvān pratārayati nirvṛtau || 57 ||&nbsp;</span><span id='7862044bi' class='verse'>
+						 śāntimārgāvatīrṇāṃś ca prāpyanirvāṇasaṃjñinaḥ |<br />saddharmapuṇḍarīkādidharmatattvaprakāśanaiḥ || 58 || pūrvagrahān nivartyaitān prajñopāyaparigrahāt |<br />paripācyottame yāne vyākaroty agrabodhaye || 59 ||&nbsp;</span><span id='7862045bi' class='verse'>
+						 saukṣmyāt prabhāvasaṃpatter bālasārthātivāhanāt |<br />gāmbhīryaudāryamāhātmyam eṣu jñeyaṃ yathākramam || 60 ||&nbsp;</span><span id='7862046bi' class='verse'>
+						 prathamo dharmakāyo ’tra rūpakāyau tu paścimau |<br />vyomni rūpagatasyeva prathame ’ntyasya vartanam || 61 ||&nbsp;</span><span id='7862047bi' class='verse'>
+						 tasyaiva kāyatrayasya jagaddhitasukhādhānavṛttau nityārtham ārabhya ślokaḥ |<br />hetvānantyāt sattvadhātvakṣayatvāt kāruṇyarddhijñānasaṃpattiyogāt |<br />dharmaiśvaryān mṛtyumārāvabhaṅgān naiḥsvābhāvyāc chāśvato lokanāthaḥ || 62 ||&nbsp;</span><span id='7862048bi' class='verse'>
+						 asya piṇḍārthaḥ ṣaḍbhiḥ ślokair veditavyaḥ |<br />kāyajīvitabhogānāṃ tyāgaiḥ saddharmasaṃgrahāt |<br />sarvasattvahitāyādipratijñottaraṇatvataḥ || 63 ||&nbsp;</span><span id='7862049bi' class='verse'>
+						 buddhatve suviśuddhāyāḥ karuṇāyāḥ pravṛttitaḥ |<br />ṛddhipādaprakāśāc ca tair ’vasthānaśaktitaḥ || 64 ||&nbsp;</span><span id='7862050bi' class='verse'>
+						 jñānena bhavanirvāṇadvayagrahavimuktitaḥ |<br />sadācintyasamādhānasukhasaṃpattiyogataḥ || 65 ||&nbsp;</span><span id='7862051bi' class='verse'>
+						 loke vicarato lokadharmair anupalepataḥ |<br />śamāmṛtapadaprāptau mṛtyumārāpracārataḥ || 66 ||&nbsp;</span><span id='7862052bi' class='verse'>
+						 asaṃskṛtasvabhāvasya muner ādipraśāntitaḥ |<br />nityam aśaraṇānāṃ ca śaraṇābhyupapattitaḥ || 67 ||&nbsp;</span><span id='7862053bi' class='verse'>
+						 saptabhiḥ kāraṇair ādyair nityatā rūpakāyataḥ |<br />paścimaiś ca tribhiḥ śāstur nityatā dharmakāyataḥ || 68 ||&nbsp;</span><span id='7862054bi' class='verse'>
+						 sa cāyam āśrayaparivṛttiprabhāvitas tathāgatānāṃ prāptinayo ’cintyanayenānugantavya iti |<br />acintyārtham ārabhya ślokaḥ |<br />avākyavattvāt paramārthasaṃgrahād atarkabhūmer upamānivṛttitaḥ |<br />niruttaratvād bhavaśāntyanugrahād acintya āryair api buddhagocaraḥ || 69 ||&nbsp;</span><span id='7862055bi' class='verse'>
+						 asya piṇḍārthaś caturbhiḥ ślokair veditavyaḥ |<br />acintyo ’nabhilāpyatvād alāpyaḥ paramārthataḥ |<br />paramārtho ’pratarkyatvād atarkyo vyanumeyataḥ || 70 ||&nbsp;</span><span id='7862056bi' class='verse'>
+						 vyanumeyo ’nuttaratvād ānuttaryam anudgrahāt |<br />anudgraho ’pratiṣṭhānād guṇadoṣāvikalpanāt || 71 ||&nbsp;</span><span id='7862057bi' class='verse'>
+						 pañcabhiḥ kāraṇaiḥ saukṣmyād acintyo dharmakāyataḥ |<br />ṣaṣṭhenātattvabhāvitvād acintyo rūpakāyataḥ || 72 ||&nbsp;</span><span id='7862058bi' class='verse'>
+						 anuttarajñānamahākṛpādibhir guṇair acintyā guṇapāragā jināḥ |<br />ataḥ kramo ’ntyo ’yam api svayaṃbhuvo ’bhiṣekalabdhā na maharṣayo vidur iti || 73 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862887bi' class='verse'>
+							此明何義。以依 此身相應諸行差別故。說八偈 非初非中後 不破壞不二 遠離於三界 無垢無分別 此甚深境界 非二乘所知 具勝三昧慧 如是人能見&nbsp;</span><span id='7862888bi' class='verse'>
+						 出過於恆沙 不思議功德 唯如來成就 不與餘人共 如來妙色身 清淨無垢體 遠離諸煩惱 及一切習氣&nbsp;</span><span id='7862889bi' class='verse'>
+						 種種勝妙法 光明以為體 令眾生解脫 常無有休息 所作不思議 如摩尼寶王 能現種種形 而彼體非實&nbsp;</span><span id='7862890bi' class='verse'>
+						 為世間說法 示現寂靜處 教化使淳熟 授記令入道 如來鏡像身 而不離本體 猶如一切色 不離於虛空&nbsp;</span><span id='7862891bi' class='verse'>
+						 此八行偈以二十五偈略釋應知。偈言 向說佛法身 及一切種智 自在與涅槃 及第一義諦 不可思議法 應供等功德 唯自身內證 應當如是知&nbsp;</span><span id='7862892bi' class='verse'>
+						 彼三身差別 實法報化等 所謂深快大 無量功德身&nbsp;</span><span id='7862893bi' class='verse'>
+						 明實體身者 謂諸佛法身 略說五種相 五功德應知&nbsp;</span><span id='7862894bi' class='verse'>
+						 無為無差別 遠離於二邊 出離煩惱障 智障三昧障&nbsp;</span><span id='7862895bi' class='verse'>
+						 以離一切垢 故聖人境界 清淨光明照 以法性如是&nbsp;</span><span id='7862896bi' class='verse'>
+						 無量阿僧祇 不可數思議 無等諸功德 到第一彼岸&nbsp;</span><span id='7862897bi' class='verse'>
+						 實法身相應 以快不可數 非思量境界 及遠離習氣 無邊等佛法 次第不離報&nbsp;</span><span id='7862898bi' class='verse'>
+						 受種種法味 示現諸妙色 淨慈悲習氣 無虛妄分別 利益諸眾生 自然無休息&nbsp;</span><span id='7862899bi' class='verse'>
+						 如如意寶珠 滿足眾生心 受樂佛如是 神通力自在 此神力自在 略說有五種&nbsp;</span><span id='7862900bi' class='verse'>
+						 說法及可見 諸業不休息 及休息隱沒 示現不實體 是名要略說 有五種自在&nbsp;</span><span id='7862901bi' class='verse'>
+						 如摩尼寶珠 依種種諸色 異本生諸相 一切皆不實 如來亦如是 方便力示現&nbsp;</span><span id='7862902bi' class='verse'>
+						 &nbsp;</span><span id='7862903bi' class='verse'>
+						 從兜率陀退 次第入胎生 習學諸伎藝 嬰兒入王宮&nbsp;</span><span id='7862904bi' class='verse'>
+						 厭離諸欲相 出家行苦行 推問諸外道 往詣於道場 降伏諸魔眾 成大妙覺尊&nbsp;</span><span id='7862905bi' class='verse'>
+						 轉無上法輪 入無餘涅槃 於不清淨國 現如是等事&nbsp;</span><span id='7862906bi' class='verse'>
+						 世間無休息 宣說無常苦 無我寂靜名 方便智慧力 令彼諸眾生 厭離三界苦&nbsp;</span><span id='7862907bi' class='verse'>
+						 後入於涅槃 以入寂靜道 諸聲聞人等 有是虛妄相 言我得涅槃 法華等諸經 皆說如實法 般若方便攝 迴先虛妄心 令淳熟上乘 授妙菩提記 微細大勢力&nbsp;</span><span id='7862908bi' class='verse'>
+						 令愚癡眾生 過嶮難惡道 深快及以大 次第說應知&nbsp;</span><span id='7862909bi' class='verse'>
+						 初法身如來 第二色身佛 譬如虛空中 有一切色身 於初佛身中 最後身亦爾&nbsp;</span><span id='7862910bi' class='verse'>
+						 自此以下。即依如是三種佛三身。為樂眾生利益眾生。略說二偈 世尊體常住 以修無量因 眾生界不盡 慈悲心如意 智成就相應 法中得自在 降伏諸魔怨 體寂靜故常&nbsp;</span><span id='7862911bi' class='verse'>
+						 此二行偈以六行偈略釋應知。偈言 棄捨身命財 攝取諸佛法 為利益眾生 究竟滿本願&nbsp;</span><span id='7862912bi' class='verse'>
+						 得清淨佛身 起大慈悲心 修行四如意 依彼力住世&nbsp;</span><span id='7862913bi' class='verse'>
+						 以成就妙智 離有涅槃心 常得心三昧 成就樂相應&nbsp;</span><span id='7862914bi' class='verse'>
+						 常在於世間 不為世法染 得淨甘露處 故離一切魔&nbsp;</span><span id='7862915bi' class='verse'>
+						 諸佛本不生 本來寂靜故 以常可歸依 故言歸依我&nbsp;</span><span id='7862916bi' class='verse'>
+						 初七種譬喻 如來色身常 後三種譬喻 善逝法身常&nbsp;</span><span id='7862917bi' class='verse'>
+						 此偈明何義。諸佛如來依法身轉得無上身。不可思議應知。依不可思議故。說二偈 非言語所說 第一義諦攝 離諸覺觀地 無譬喻可說 最上勝妙法 不取有涅槃 非三乘所知 唯是佛境界&nbsp;</span><span id='7862918bi' class='verse'>
+						 此二行偈以五行偈略釋應知。偈言 不可得思議 以離言語相 離言語相者 以第一義攝 第一義攝者 非思量境界 非思量境者 以無譬喻知&nbsp;</span><span id='7862919bi' class='verse'>
+						 無譬喻知者 以最勝無上 最勝無上者 不取有涅槃 不取是二者 不取功德過&nbsp;</span><span id='7862920bi' class='verse'>
+						 前五種譬喻 微細不思議 如來法身常 第六譬喻者 以得自在故 如來色身常&nbsp;</span><span id='7862921bi' class='verse'>
+						 &nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863750bi' class='verse'>
+							de la ’jug pa’i don las brtsams nas | saṅs rgyas kyi sku rnam par dbye ba’i tshigs su bcad pa ’di bźi ste | thog ma dbus mtha’ med ciṅ rnam dbyer med || gñis med gsum bral dri med rnam rtog med || chos dbyiṅs raṅ bźin gaṅ yin de rtogs pa || mñam par gźag pa’i rnal ’byor ba yis mthoṅ ||&nbsp;</span><span id='7863751bi' class='verse'>
+						 gźal med gaṅ gā’i byed ma las ’das pa || bsam med mñam med yod tan rnams daṅ ldan || de bźin gśegs pa’i dri med dbyiṅs de ni || bag chags bcas pa’i ñes pa rnam spaṅs pa ||&nbsp;</span><span id='7863752bi' class='verse'>
+						 sna tshogs dam chos ’od zer mṅa’ ba’i skus || ’gro ba’i rnam grol don grub la brtson pa || mdzad pa yid bźin nor bu’i rgyal bźin te || sna tshogs dṅos dan gde yi raṅ bźin min ||&nbsp;</span><span id='7863753bi' class='verse'>
+						 ’jig rten źi ba’i lam la ’jug pa daṅ || rab tu smin daṅ luṅ ston rgyu yi gzugs || gaṅ yin de yaṅ ’dir ni rtag gnas te || nam mkha’i khams su gzugs kyi khams bźin no ||&nbsp;</span><span id='7863754bi' class='verse'>
+						 tshigs su bcad pa bźi po ’di’i don ni | tshigs su bcad pa ñi śus rig par bya ste | raṅ ’byuṅ rnams kyi thams cad mkhyen || saṅs rgyas ñid ces gaṅ brjod pa || mchog tu mya ṅan ’das bsam med || dgra bcom so so’i bdag gyur pa ||&nbsp;</span><span id='7863755bi' class='verse'>
+						 de dbye zab daṅ rgya che daṅ || bdag ñid chen po’i yon tan gyi || chos kyis rab phye raṅ bźin la || sogs pa’i sku gsum dag gis ’jug |&nbsp;</span><span id='7863756bi' class='verse'>
+						 de la saṅs rgyas rnams kyi ni || ṅo bo ñid sku mtshan ñid lṅa || mdor na yon tan lṅa daṅ ni || ldan pa ñid du rig par bya ||&nbsp;</span><span id='7863757bi' class='verse'>
+						 ’dus ma byas śiṅ rnam dbyer med || mtha’ gñis dag ni rnam par spaṅ || ñon moṅs śes bya’i sñoms ’jug gis || sgrib gsum las ni ṅes grol te ||&nbsp;</span><span id='7863758bi' class='verse'>
+						 dri med rnam par rtog med daṅ || rnal ’byor rnams kyi yul yin phyir || chos dbyiṅs ṅo bo ñid kyis ni || dag pa’i phyir ni ’od gsal ba ||&nbsp;</span><span id='7863759bi' class='verse'>
+						 gźal med graṅs med bsam med pa || mñam med dag pa’i mthar thug pa || yon tan rnams daṅ yaṅ dag par || ṅo bo ñid kyi sku ldan te ||&nbsp;</span><span id='7863760bi' class='verse'>
+						 rgya che’i phyir daṅ graṅs med phyir || rtog ge’i yul ni min phyir daṅ || ’ba’ źig bag chags bcas spaṅs phyir || gźal med la sogs go rims bźin ||&nbsp;</span><span id='7863761bi' class='verse'>
+						 sna tshogs chos la rdzogs loṅs spyod || raṅ bźin chos ni snaṅ phyir daṅ || thugs rje dag pa’i rgyu mthun pa || ’gro den rgyun mi ’chad phyir daṅ ||&nbsp;</span><span id='7863762bi' class='verse'>
+						 rnam par rtog med lhun grub par || ’dod pa ji bźin yoṅs skoṅ phyir || yid bźin nor bu’i rdzu ’phrul gyis || rdzogs par loṅs spyod rnam par gnas ||&nbsp;</span><span id='7863763bi' class='verse'>
+						 brjod ston mdzad rgyun mi chad daṅ || mṅon par ’du byed med pa daṅ || de yi ṅo bo mi ston la || ’dir ni sna tshogs rnam lṅar brjod ||&nbsp;</span><span id='7863764bi' class='verse'>
+						 ji ltar tshon ni sna tshogs kyis || nor bu de dṅos mi snaṅ ltar || de bźin ’gro rkyen sna tshogs pas || khyab bdag de dṅos min par snaṅ ||&nbsp;</span><span id='7863765bi' class='verse'>
+						 thugs rje chen pos ’jig rten mkhyen || ’jig rten kun la gzigs nas ni || chos kyi sku las ma g-yos par || sprul ba’i raṅ bźin sna tshogs kyis ||&nbsp;</span><span id='7863766bi' class='verse'>
+						 skye ba mṅon par skye ba daṅ || dga’ ldan nas ni ’pho ba daṅ || lhums su ’jug daṅ bltams pa daṅ || bzo yi gnas la mkhas pa daṅ ||&nbsp;</span><span id='7863767bi' class='verse'>
+						 btsun mo’i ’khor gyis dgyes rol daṅ || des ’byuṅ dka’ ba spyod pa daṅ || byaṅ chub sñiṅ por gśegs pa daṅ || bdud sde ’joms daṅ rdzogs par ni ||&nbsp;</span><span id='7863768bi' class='verse'>
+						 byaṅ chub chos kyi ’khor lo daṅ || mya ṅan ’das par gśegs mdzad rnams || yoṅs su ma dag źiṅ rnams su || srid pa ji srid gnas par ston ||&nbsp;</span><span id='7863769bi' class='verse'>
+						 mi || rtag sdug bsṅal bdag med daṅ || źi ba’i sgra yis thabs mkhyen pas || sems can srid gsum skyo bskyed nas || mya ṅan ’das la rab ’jug mdzad ||&nbsp;</span><span id='7863770bi' class='verse'>
+						 źi ba’i lam la rab źugs pa || mya ṅan ’das thob ’du śes can || dam chos padma dkar la sogs || chos kyi de ñid bstan pa yis || de dag ṅar ’dzin las bzlog ste || thabs daṅ śes rab yoṅs bzuṅ bas || theg pa mchog la smin mdzad de || byaṅ chub mchog tu luṅ ston to ||&nbsp;</span><span id='7863771bi' class='verse'>
+						 zab daṅ mthu ni sna tshogs daṅ || byis pa don mthun rab ’dren phyir || ’di dag graṅ bźin zab pa daṅ || rgya che’i bdag ñid cher śes bya ||&nbsp;</span><span id='7863772bi' class='verse'>
+						 ’di ni daṅ po’i chos sku ste || phyi ma dag ni gzugs kyi sku || nam mkha’ la ni gzugs gnas bźin || daṅ po la ni tha ma gnas ||&nbsp;</span><span id='7863773bi' class='verse'>
+						 sku gsum po ni ’di dag ñid kyis ’gro ba la phan pa daṅ bde ba sgrub pa ’jug pa rtag pa’i don las brtsams nas tshigs su bcad pa || rgyu mtha’ yas daṅ sems can mi zad daṅ || brtse daṅ ’phrul daṅ mkhyen daṅ phun tshogs ldan || chos kyi dbaṅ phyug ’chi ba’i bdud bcom daṅ || ṅo bo med phyir ’jig rten mgon po rtag ||&nbsp;</span><span id='7863774bi' class='verse'>
+						 ’di’i bsdus pa’i don tshigs su bcad pa drug gis rig par bya ste || lus daṅ srog daṅ loṅs spyod rnams || btad nas dam chos ’dzin phyir daṅ || sems can kun la phan pa’i phyir || daṅ po’i dam bcas mthar ’byin phyir ||&nbsp;</span><span id='7863775bi' class='verse'>
+						 saṅs rgyas ñid ni gtsaṅ ba daṅ || dag pa’i thugs rje rab ’jug phyir || rdzu ’phrul rkaṅ pa ston pa ni || de yis gnas bar spyod pa’i phyir ||&nbsp;</span><span id='7863776bi' class='verse'>
+						 mkhyen pas ’khor daṅ mya ṅan ’da’ || gñis su ’dzin pas grol ba’i phyir || rtag tu bsam yas tiṅ ’dzin gyi || bde ba phun sum tshogs ldan phyir ||&nbsp;</span><span id='7863777bi' class='verse'>
+						 ’jig rten na ni spyod pa na || ’jig rten chos kyis gos med phyir || ’chi med źi ba’i gnas thob pa || ’chi bdud rgyu ba med pa’i phyir ||&nbsp;</span><span id='7863778bi' class='verse'>
+						 ’dus ma byas pa’i raṅ bźin gyi || thub pa gdod nas rab źi’i phyir || rtag pa skyabs med rnams kyi ni || skyabs la sogs pa ’thad phyir ro ||&nbsp;</span><span id='7863779bi' class='verse'>
+						 daṅ po yi ni rgyu bdun ni || gzugs kyi sku yi rtag ñid de || phyi ma gsum gyis stoṅ pa na || chos kyi sku yi rtag pa ñid ||&nbsp;</span><span id='7863780bi' class='verse'>
+						 de bźin gśegs pa rnams kyi gnas yoṅs su gyur pas rab tu phye ba thob pa’i tshul de yaṅ bsam gyis mi khyab pa’i tshul gyis rtogs par bya ba yin pas bsam gyis mi khyab pa’i don las brtsams te tshigs du bcad pa | ṅag yul min phyir don dam gyis bsdus phyir || rtogs gnas min phyir dpe las ’das pa’i p hyir || bla na med phyir srid źis ma bsdus phyir || rgyal yul ’phags rnams kyis kyaṅ bsam mi khyab ||&nbsp;</span><span id='7863781bi' class='verse'>
+						 ’di’i bsdus pa’i don ni tshigs su bcad pa bźis rig par bya ste | bsam med brjod du med phyir te || brjod med don dam yin phyir ro || don dam brtag bya min phyir te || brtag min rjes dpag bya min phyir ||&nbsp;</span><span id='7863782bi' class='verse'>
+						 dpag min bla na med pa’i phyir || bla na med pa ma bsdus phyir || ma bsdus gnas pa med phyir te || yon tan skyon rtogs med phyir ro ||&nbsp;</span><span id='7863783bi' class='verse'>
+						 rgyu lṅa dag gis phra ba’i phyir || chos sku bsam mi khyab pa ste || drug pas de yi dṅos min phyir || gzugs sku bsam gyis mi khyab pa’o ||&nbsp;</span><span id='7863784bi' class='verse'>
+						 bla med ye śes thugs rje che sogs yon tan gyis || yon tan pha rol byon pa’i rgyal ba bsam mi khyab || des na raṅ byuṅ rnanms kyi tha ma’i tshul ’di ni || draṅ sroṅ chen po dbaṅ thob rnams kyis kyaṅ rig min ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864613bi' class='verse'>
+							So, with reference to this subject of ‘manifestation’ there are ślokas about the distinction of [three kinds of] Buddha’s Body. (Kārikās 8-11) That which has neither beginning, middle nor end, Is indivisible, non-dual, liberated in three ways, Immaculate and non-discriminative,… That represents the nature of the Absolute Essence, And is perceived by the Saints, Who are concentrating their mind, striving after it; || 38 ||&nbsp;</span><span id='7864614bi' class='verse'>
+						 This [Absolute Essence] is nothing but the pure Essence of the Tathāgatas, Which is endowed with properties, inconceivable, unequalled, Innumerable, and surpaśing the sands of the Gaṅgā in number And has rooted out all the defects along with impressions. || 39 ||&nbsp;</span><span id='7864615bi' class='verse'>
+						 One who exerts in concentrating for the liberation of the world, With the body in the form of different coloured rays of the Highest Doctrine, Has a resemblance, in his acts, to the king of wish-fulfilling gems, Appearing in various forms, which, however, have not their own substance 99). || 40 ||&nbsp;</span><span id='7864616bi' class='verse'>
+						 That which is the cause, in various worlds, For advancing into the Quiescent Path, For bringing to full development and for giving prophecy, That is the Apparitional Form [of the Buddha], Which also abides always in the Absolute Essence, As the visible forms in the element of space. || 41 ||&nbsp;</span><span id='7864617bi' class='verse'>
+						 The summarized meaning of these ślokas are to be known by the following 20 verses: That which is called Buddhahood Is the Omniscience of the Self-born, The highest Nirvāṇa, and the inconceivable Arhatship, Which is realized through self-introspection. || 42 ||&nbsp;</span><span id='7864618bi' class='verse'>
+						 This [Buddhahood] manifests itself in the variety Of three Bodies, the Body of the Absolute Essence, etc., Represented by the quality of Profundity, Of Magnificence, and of Magnanimity, [respectively]. || 43 ||&nbsp;</span><span id='7864619bi' class='verse'>
+						 (a. The Body of the Absolute Essence.) Here, the Body of the Absolute Essence Of the Buddha, in short, is to be known As of five characteristics, And being possessed of five kinds of properties. || 44 ||&nbsp;</span><span id='7864620bi' class='verse'>
+						 It is ‘immutable’ and ‘indivisible’ Is ‘devoid of the two extremities’ And is ‘delivered from the Obstructions’ Of defilement, ignorance and distraction. || 45 ||&nbsp;</span><span id='7864621bi' class='verse'>
+						 Being free from all stains and thought-construction, And being accessible to the Saints, It is ‘radiant and pure’ Owing to the nature of the Absolute Essence. || 46 ||&nbsp;</span><span id='7864622bi' class='verse'>
+						 ‘Immeasurable’, ‘innumerable’, ‘inconceivable’, ‘incomparable’ And representing ‘the highest point of purity’; The Body of the Absolute Essence is endowed With these [5] kinds of virtuous qualities. || 47 ||&nbsp;</span><span id='7864623bi' class='verse'>
+						 Being magnificent and numberless, Being inaccessible to investigation, Being unique and devoid of the defiling forces, It is ‘immeasurable’ and so on, respectively. || 48 ||&nbsp;</span><span id='7864624bi' class='verse'>
+						 (b. The Body of Enjoyment.) It manifests itself the Doctrine, owing to its nature Of enjoying the Doctrine in various forms; Being the natural outflow of pure Compassion, It works uninterruptedly for the sake of living beings; || 49 ||&nbsp;</span><span id='7864625bi' class='verse'>
+						 It fulfils the aim according to the wish Without thought-construction and with no effort; [By these points] the Body of Enjoyment is characterized Due to its power like that of the wish-fulfilling gems. || 50 ||&nbsp;</span><span id='7864626bi' class='verse'>
+						 In teaching, in the visible form, in acting ceaselessly, And acting with no artificial effort, And in its appearance of illusion, The variety of [its manifestation] is said to be 5-fold. || 51 ||&nbsp;</span><span id='7864627bi' class='verse'>
+						 Just as a gem, being dyed with various colours, Does not make manifest its real Essence; Similarly, the Lord never shows its real nature, Though it appears in various forms, according to the conditions of the living beings. || 52 ||&nbsp;</span><span id='7864628bi' class='verse'>
+						 (c. The Apparitional Body.) [The Buddha], being the knower of the world, Perceiving fully the world, with Great Compassion, Manifests himself in various apparitional forms, Without being separated from his Absolute Body. || 53 ||&nbsp;</span><span id='7864629bi' class='verse'>
+						 The [various] previous births, The birth in the Tuṣita-heaven, and descent from it, The entrance into the womb, and the birth [in this world], The skilfulness in various arts and works, || 54 ||&nbsp;</span><span id='7864630bi' class='verse'>
+						 Pleasurable entertainments among ladies in the harem, The renouncement of the world, practice of asceticism, passage to the Excellent Seat of Enlightenment, The conquest over the army of Evil Demons, || 55 ||&nbsp;</span><span id='7864631bi' class='verse'>
+						 The [acquisition of] Enlightenment, Setting into motion the wheel of the Doctrine, And the departure into Nirvāna; . . . all of them He shows in the impure worlds, as long as they exist. || 56 ||&nbsp;</span><span id='7864632bi' class='verse'>
+						 [The Buddha], the knower of means, creates an aversion To the Three Worlds among the living beings By the words, ‘evanescent’, ‘suffering’, ‘non-substantial’; And by the word ‘quiescent’ he leads them into Nirvāṇa. || 57 ||&nbsp;</span><span id='7864633bi' class='verse'>
+						 Those who have entered the way to Quiescence, And who imagine that they have attained Nirvāṇa, Them he diverts from their former prejudice, Through the teaching of the True Doctrines In the Saddharmapuṇḍarīka and other Sūtras, And, embracing Wisdom and Skilful Means, Makes them mature in the Ultimate Vehicle, And gives prophecy for them to attain the Highest Enlightenment. || 58-59 ||&nbsp;</span><span id='7864634bi' class='verse'>
+						 Being subtle, accomplishing the power And toiling excessively for the company of ordinary beings, In these points [the Buddha] should be known, respectively, As the Profound, the Magnificent and the Magnanimous. || 60 ||&nbsp;</span><span id='7864635bi' class='verse'>
+						 Here, the first Body is the Absolute Body, And the latter two are the Bodies in visible forms, These latter appear on the basis of the former, As the visible forms appear in space. || 61 ||&nbsp;</span><span id='7864636bi' class='verse'>
+						 (VII. NITYA) Now this threefold Body made manifest in order to be the support for the weal and happiness of the world, has an ‘eternal’ character [in its manifestation]. With reference to this subject, we have one śloka. (Kārikā 12) Having infinite causes [for the attainment of his state], Having an endless number of living beings to convert, Being endowed with Compassion, Miraculous Powers, Wisdom and Bliss, Governing all the elements, vanquishing the demon of Death, And representing non-substantiality, The lord of the World is eternal. || 62 ||&nbsp;</span><span id='7864637bi' class='verse'>
+						 The summarized meaning of this [śloka] is to be known by the following verses. Casting off his body, life and property, He has preserved the Highest doctrine; For the benefits of all living beings, He fulfills his first vow. || 63 ||&nbsp;</span><span id='7864638bi' class='verse'>
+						 In his Buddhahood, there is made manifest Compassion, pure and immaculate, He shows his [four] bases of Miraculous Powers, By which power he abides in the world; || 64 ||&nbsp;</span><span id='7864639bi' class='verse'>
+						 Owing to his Wisdom, he is liberated from The dualistic conception of Saṃsāra and Nirvāṇa; By his constant practice of the inconceivable meditation, He partakes of the complement of bliss, || 65 ||&nbsp;</span><span id='7864640bi' class='verse'>
+						 While he is acting, in the world, He is unaffected by the worldly elements; Having attained the state of quiescence and immortality, He leaves no room for [the activity of] the demon of Death; || 66 ||&nbsp;</span><span id='7864641bi' class='verse'>
+						 Being of an immutable nature, The Lord is perfectly pacified from the outset; And he gives a refuge for those who have no shelter, Because of these [10] points, he is ‘eternal’. || 67 ||&nbsp;</span><span id='7864642bi' class='verse'>
+						 The first of these motives show The eternity of the Preceptor in his Apparitional Body, The latter demonstrate the eternity From the viewpoint of the Absolute Body. || 68 ||&nbsp;</span><span id='7864643bi' class='verse'>
+						 Now, this method of attainment [of Buddhahood] by the Buddhas, which represents the ‘Perfect Manifestation of the Basis’ is to be understood as of inconceivable character. With reference to this ‘ inconceivability’, we have one śloka. (Kārikā 13) Being unutterable, containing the Highest Truth, Inaccessible to investigation and incomparable, Being the supreme, and relating neither To the Phenomenal World nor to Nirvāṇa, The sphere of Buddha is inconceivable even for the Saints. || 69 ||&nbsp;</span><span id='7864644bi' class='verse'>
+						 The summerized meaning of this [śloka] is to be understood by the following verses. It is ‘inconceivable’ since it is unutterable It is ‘unutterable’ since it is the Highest Truth, It is ‘the Highest Truth’ since it cannot be constructed by thought. It is ‘beyond investigation’ since it is incomparable; || 70 ||&nbsp;</span><span id='7864645bi' class='verse'>
+						 It is ‘incomparable’ since it is the supreme. It is ‘the supreme’ since it is not included; [Either in the Phenomenal World or in Nirvāṇa]; ‘Not included’ means the Buddha abides in neither of the two And never regards [in a one-sided manner] That Nirvāṇa is of merit and the other of defect. || 71 ||&nbsp;</span><span id='7864646bi' class='verse'>
+						 Being subtle by the [first] motives He is inconceivable in his Absolute Body, And by the 6th, on account of his Apparitional Body, He is inconceivable because of no identification. With either Nirvāṇa, or Phenomenal World. || 72 ||&nbsp;</span><span id='7864647bi' class='verse'>
+						 Being endowed with the Highest Wisdom, With the Great Compassion and other virtues, The Buddha, who has attained the ultimate point of virtue, Is inaccessible to human thought; Therefore, this final stage of the Buddha Is unknown even to the Great Sages Who have attained the stage of Initiation. || 73 ||&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7862059bi' class='chaptertitle'>
+							iti ratnagotravibhāge mahāyānottaratantraśāstre bodhyadhikāro nāma dvitīyaḥ paricchedaḥ || 2 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7862922bi' class='chaptertitle'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7863785bi' class='chaptertitle'>
+							theg pa chen po rgyud bla ma’i bstad bcos dkon mchog gi rigs rnam par dbye ba las || byaṅ chub kyi skabs źes bya ba ste le’u gñis ba’o ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='7864648bi' class='chaptertitle'>
+							Finished is the second chapter entitled ‘the Enlightenment’ in the ANALYSIS OF THE GERM OF THE JEWELS, a Treatise on the Ultimate Doctrine of the Great Vehicle.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7861979";
+								kilderef = "Rgvbh San: Johnston (1950)  80,1 - San: Johnston (1950) 90,15";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7862060'></div><div class='clear'></div><span id='7862060bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7862060";
+							kilderef = "Rgvbh San: Johnston (1950) 91,1  - San: Johnston (1950) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7862842";
+								kilderef = "Rgvbh Chi: T. 1611 841a29 - Chi: T. 1611 ";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7862923'></div><div class='clear'></div><span id='7862923bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7862923";
+							kilderef = "Rgvbh Chi: T. 1611 843c26  - Chi: T. 1611 ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7863705";
+								kilderef = "Rgvbh Tib: Tg phi  116a1 - Tib: Tg phi 119b5";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7863786'></div><div class='clear'></div><span id='7863786bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7863786";
+							kilderef = "Rgvbh Tib: Tg phi 119b5  - Tib: Tg phi ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'>								<script language="javascript" type="text/javascript">
+
+								tekstid = "7864568";
+								kilderef = "Rgvbh Eng: Takasaki (1966)  314 - Eng: Takasaki (1966) 335";
+								$('#'+tekstid).text(kilderef);
+								</script>
+							<div class='kilderef' id='7864649'></div><div class='clear'></div><span id='7864649bi' class='paragraph'>
+							CHAPTER III. THE PROPERTIES OF THE BUDDHA&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7864649";
+							kilderef = "Rgvbh Eng: Takasaki (1966) 336  - Eng: Takasaki (1966) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=56cdb230-5cc5-11df-870c-00215aecadea</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

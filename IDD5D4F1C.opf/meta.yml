@@ -1,0 +1,110 @@
+id: IDD5D4F1C
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T19:22:49.111104'
+last_modified: '2022-05-27T19:22:49.111117'
+parser: null
+source_metadata:
+  title: 'Asaṅga/Maitreya: Ratnagotravibhāga'
+  language: bo
+  base:
+    fB4BA:
+      title: Title
+      base_file: fB4BA.txt
+      order: 1
+    f76CC:
+      title: Preface
+      base_file: f76CC.txt
+      order: 2
+    f74B3:
+      title: CI_I. Introduction
+      base_file: f74B3.txt
+      order: 3
+    fD75E:
+      title: CI_II. The Jewel of the Buddha
+      base_file: fD75E.txt
+      order: 4
+    f4660:
+      title: CI_III. The Jewel of the Doctrine
+      base_file: f4660.txt
+      order: 5
+    f763C:
+      title: CI_IV. The Jewel of the Community
+      base_file: f763C.txt
+      order: 6
+    f83CC:
+      title: CI_V. The Three Jewels as Refuges
+      base_file: f83CC.txt
+      order: 7
+    fB03B:
+      title: CI_VI. The Germ Of Three Jewels In Four Aspects
+      base_file: fB03B.txt
+      order: 8
+    f9595:
+      title: 'CI_VII. The Sermon: All Living Beings are possessed of The Matrix of
+        the Tathāgata'
+      base_file: f9595.txt
+      order: 9
+    f8C77:
+      title: CI_VIII. Analysis of the Germ from 10 Points of View
+      base_file: f8C77.txt
+      order: 10
+    f5F8F:
+      title: CI_IX. The 9 Illustrations on the Germ Covered with Defilements
+      base_file: f5F8F.txt
+      order: 11
+    f32D3:
+      title: CI_X. The Essential Characteristics of the Matrix of the Tathāgata
+      base_file: f32D3.txt
+      order: 12
+    fCBB6:
+      title: CI_XI. The Purpose of Instruction
+      base_file: fCBB6.txt
+      order: 13
+    f66EE:
+      title: CII_XII. General Characteristics of the Reality Free from Pollutions
+      base_file: f66EE.txt
+      order: 14
+    fBCC5:
+      title: CII_XIII. 8 Points on the Undefiled Reality
+      base_file: fBCC5.txt
+      order: 15
+    fC8B2:
+      title: CIII_XIV. General Characteristics Of The Buddha’s Properties
+      base_file: fC8B2.txt
+      order: 16
+    f3122:
+      title: CIII_XV. 64 Properties of the Buddha
+      base_file: f3122.txt
+      order: 17
+    f2044:
+      title: CIV_XVI. General Characteristics of the Acts of the Buddha
+      base_file: f2044.txt
+      order: 18
+    f1FBF:
+      title: CIV_XVII. 9 Illustrations of the Buddha’s Acts
+      base_file: f1FBF.txt
+      order: 19
+    f26AC:
+      title: CV_XVIII. The Merits of Having Faith in the Doctrine of the Essence of
+        Buddhahood
+      base_file: f26AC.txt
+      order: 20
+    f3B44:
+      title: Colophon
+      base_file: f3B44.txt
+      order: 21
+  chapter_to_tile:
+    CI: 'Chapter I: The Matrix of the Tathāgata'
+    CII: 'Chapter II: The Matrix of the Tathāgata'
+    CIII: 'Chapter III: The Properties of the Buddha'
+    CIV: 'Chapter IV: The Acts of The Buddha'
+    CV: 'Chapter V: The Merits of Faith'
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null
